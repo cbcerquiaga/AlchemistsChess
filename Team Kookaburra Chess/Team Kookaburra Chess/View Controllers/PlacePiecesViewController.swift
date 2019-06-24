@@ -1011,7 +1011,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         case .king:
             string = "Can move and attack one space in every direction. The game ends when a player runs out of kings. You need to place at least one of them or a superking to begin the game."
         case .dummy:
-            string = ""
+            string = "Removes any pieces from the highlighted space and lets you spend its summoning points on another piece."
         case .unicorn:
             string = "Can move as both a queen and a knight, making it very difficult for opponents to capture."
         case .superKing:
