@@ -20,6 +20,8 @@ class OpeningScreen: UIViewController {
     @IBOutlet weak var levelUpBar: UIProgressView!
     @IBOutlet weak var levelDownBar: UIProgressView!
     @IBOutlet weak var banner: UIImageView!
+    @IBOutlet weak var playButton: UIButton!
+    
     var goingUp = true //only for testing
     var timer = Timer() //only for testing
     // var currentAlert = UIAlertController()
@@ -181,10 +183,6 @@ class OpeningScreen: UIViewController {
     }
     
     
-    @IBAction func myFriendButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "MyFriendsBtSegue", sender: self)
-    }
-    
     @IBAction func storeButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "StoreSegue", sender: self)
     }
@@ -195,7 +193,6 @@ class OpeningScreen: UIViewController {
     
     @IBAction func playButtonPressed(_ sender: Any) {
         GameCenterHelper.helper.presentMatchmaker()
-        //self.performSegue(withIdentifier: "PlayBtOpeningScreenSegue", sender: self)
     }
     
     @IBAction func quickTestButtonPressed(_ sender: Any) {
@@ -266,7 +263,7 @@ class OpeningScreen: UIViewController {
     //        setUpScene(in: view)
     //    }
     @objc private func authenticationChanged(_ notification: Notification) {
-        //onlineButton.isEnabled = notification.object as? Bool ?? false
+        playButton.isEnabled = notification.object as? Bool ?? false
     }
     
     @objc private func presentGame(_ notification: Notification) {
@@ -374,7 +371,7 @@ class OpeningScreen: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "OnlineChessVCSegue") {
-            print("prepare for onlineChesVCSegue called")
+            print("prepare for onlineChessVCSegue called")
             let vc = segue.destination as! ChessVC
             vc.model = self.model
             vc.isLocalMatch = false

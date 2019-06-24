@@ -168,12 +168,12 @@ class ChessVC: UIViewController {
         //print("chessVC drawBoard called")
         let oneRow = Array(repeating: BoardCell(row: 5, col: 5, piece: ChessPiece(row: 5, column: 5, color: .clear, type: .dummy, player: playerColor), color: .clear), count: 8)
         boardCells = Array(repeating: oneRow, count: 8)
-//        for row in 0...7{
-//            for col in 0...7{
-//                let boardCell = BoardCell(row: row, col: col, piece: ChessPiece(row: row, column: col, color: .clear, type: .dummy, player: playerColor), color: .clear)
-//                boardCells[row][col] = boardCell
-//            }
-//        }
+        //        for row in 0...7{
+        //            for col in 0...7{
+        //                let boardCell = BoardCell(row: row, col: col, piece: ChessPiece(row: row, column: col, color: .clear, type: .dummy, player: playerColor), color: .clear)
+        //                boardCells[row][col] = boardCell
+        //            }
+        //        }
         //print("black formation: \(blackFormation)")
         //print("white formation: \(whiteFormation)")
         //chessBoard.takeFormations(black: blackFormation, white: whiteFormation)
@@ -237,8 +237,8 @@ class ChessVC: UIViewController {
     
     func updateLabel() {
         if isLocalMatch{
-        let color = playerTurn == .white ? "White" : "Black"
-        turnLabel.text = "\(color) player's turn"
+            let color = playerTurn == .white ? "White" : "Black"
+            turnLabel.text = "\(color) player's turn"
         } else {
             if self.model.localPlayerUIColor() == playerTurn{
                 turnLabel.text = "Your turn"
@@ -252,18 +252,18 @@ class ChessVC: UIViewController {
     
     //put info from the board into the pieceInfo array but only for the reset model
     func prepareResetPiecesArray(){
-            for array in boardCells{
-                for cell in array{
-                    if cell.piece.type != .dummy{
-                        resetModel.piecesArray.append(cell.piece.getBasicInfo())
-                    }
+        for array in boardCells{
+            for cell in array{
+                if cell.piece.type != .dummy{
+                    resetModel.piecesArray.append(cell.piece.getBasicInfo())
                 }
             }
+        }
     }
     
-//    func getOppIDfromModel() -> String {
-//        if self.model.playerIDs[0] == gc.GKLocalPlayer.local
-//    }
+    //    func getOppIDfromModel() -> String {
+    //        if self.model.playerIDs[0] == gc.GKLocalPlayer.local
+    //    }
     
     func newGame(){
         self.drawBoard()
@@ -298,9 +298,9 @@ class ChessVC: UIViewController {
         for pieceInfo in model.piecesArray{
             let piece = ChessPiece(row: pieceInfo.row, column: pieceInfo.col, color: pieceInfo.uiColor, type: pieceInfo.type, player: pieceInfo.uiColor)
             piece.setupSymbol()
-//            if piece.type != .dummy{
-//                print("There should really be a piece here somewhere")
-//            }
+            //            if piece.type != .dummy{
+            //                print("There should really be a piece here somewhere")
+            //            }
             boardCells[pieceInfo.row][pieceInfo.col].piece = piece
             chessBoard.board[pieceInfo.row][pieceInfo.col] = piece
         }
@@ -342,11 +342,11 @@ class ChessVC: UIViewController {
             
             let piece = ChessPiece(pieceInfo: pieceInfo)
             piece.setupSymbol()
-//            if piece.type != .dummy{
-//                print("There should really be a \(piece.color) piece here somewhere")
-//                print("Is the piece white? \(piece.color == .white)")
-//                print("Is the piece black? \(piece.color == .black)")
-//            }
+            //            if piece.type != .dummy{
+            //                print("There should really be a \(piece.color) piece here somewhere")
+            //                print("Is the piece white? \(piece.color == .white)")
+            //                print("Is the piece black? \(piece.color == .black)")
+            //            }
             boardCells[pieceInfo.row][pieceInfo.col].row = pieceInfo.row
             boardCells[pieceInfo.row][pieceInfo.col].col = pieceInfo.col
             
@@ -369,7 +369,9 @@ class ChessVC: UIViewController {
         for r in 0...7 {
             for c in 0...7 {
                 let pieceBasicInfo = boardCells[r][c].piece.getBasicInfo()
-                aModel.piecesArray.append(pieceBasicInfo)
+                if pieceBasicInfo.type != .dummy {
+                    aModel.piecesArray.append(pieceBasicInfo)
+                }
             }
         }
     }

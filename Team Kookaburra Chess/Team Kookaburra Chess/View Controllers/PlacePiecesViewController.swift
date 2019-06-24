@@ -78,6 +78,10 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         super.viewDidLoad()
         // TODO: reset from self.model if !isLocalMatch
         
+        if (!isLocalMatch) {
+            playerColor =  self.model.localPlayerUIColor() ;
+        }
+        
         setLabels()
         drawBoard()
         addStarterKing()
@@ -105,6 +109,8 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         pieceInfo.numberOfLines = 0
         //assign cost to the top label
         pieceCost.text = "\(piece.summonCost) points to summon"
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -519,32 +525,155 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //if no, do nothing
     }
     
+    
+    /*-----------------------------------------------------------------------------*/
+    /* READY BUTTON PRESSEd  ------------------------------------------------------------*/
+    
+    
     @IBAction func readyButtonPressed(_ sender: Any) {
         //check if the player has at least one king
-        if numKings(color: playerColor) > 0{
-            if isLocalMatch == true{
-                print("local match ready button pressed")
-                if playerColor == .white{ //
-                    p2BoardCells = boardCells
-                    playerColor = .black
-                    clearPieces()
-                    setLabels()
-                    piecePictureSetup()
-                    addStarterKing()
-                } else {
-                    localMatchReady()
-                }
-            } else {
-                onlineMatchReady()
-            }
-        } else {
+        
+        if !checkNumKings() { return; }
+        
+        checkPlayerPoints()
+        
+    }
+    
+    
+    
+    func checkNumKings() -> Bool {
+        if numKings(color: playerColor) == 0 {
             tipLabel.text = "Place a king, then you can play!"
             let ac = UIAlertController(title: "Rule", message: "You need to place at least one king before you can play", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
             ac.addAction(ok)
             present(ac, animated: true, completion: nil)
+            return false
         }
+        
+        return true
+        
     }
+    
+    
+    func checkPlayerPoints(){
+        //check if the player has used up enough points (at least 440)
+        if playerPoints < 440{
+            //if not, ask them if they're sure they want to ready up
+            let ac = UIAlertController(title: "Points remaining", message: "You still have points to spend, ready anyway?", preferredStyle: .alert)
+            let yes = UIAlertAction(title: "Ready!", style: .default, handler:
+            { action in
+                self.placePieces();
+            }
+            )
+            let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            ac.addAction(yes)
+            ac.addAction(no)
+            present(ac, animated: true, completion: nil)
+            return
+        }
+        
+        self.placePieces();
+        
+    }
+    
+    func placePieces() {
+        
+        model.setInitialPieces(playerColor: playerColor,boardCells: boardCells)
+        // model.setInitialPieces will flip the position of the black pieces coming from PlacePiecesOnlyViewController
+        
+        if isLocalMatch {
+            print("local match ready button pressed")
+            if playerColor == .white {
+                p2BoardCells = boardCells
+                playerColor = .black
+                clearPieces()
+                setLabels()
+                piecePictureSetup()
+                addStarterKing()
+            } else {
+                localMatchReady()
+            }
+        } else {
+            onlineMatchReady()
+        }
+        
+        
+    }
+    
+    func onlineMatchReady(){
+        
+        print("onlineMatchReady called")
+        
+        if (playerColor == .white && self.model.piecesAreSet && self.model.isWhiteTurn) {
+            self.performSegue(withIdentifier: "OnlineMatchSegue", sender: self)//start the game with the current piece placement
+        }
+        GameCenterHelper.helper.endTurn(self.model) { error in
+            defer {
+                print("self.isSendingTurn = false")
+            }
+            
+            if let e = error {
+                print("Error ending turn: \(e.localizedDescription)")
+                return
+            }
+            
+            self.performSegue(withIdentifier: "ReturnToMenuSegue", sender: self)
+        }
+        
+        
+        
+        
+        
+        
+        // tell GameCenterHelper ? that you're ready to play
+        
+        // GameCenterHelper will probably tell you when other player is ready...
+        
+    }
+    
+    func localMatchReady(){
+        print("localMatchReady called")
+        self.performSegue(withIdentifier: "LocalMatchSegue", sender: self)//start the game with the current piece placement
+    }
+    
+    
+    //
+    //    func returnPieces() {
+    //
+    //        // return boardcells to calling view controller, or GameModel.boardcells to these pieces
+    //
+    //        model.setPieces(playerColor: playerColor,boardCells: boardCells);
+    ////        self.dismiss(animated: true, completion: {() in
+    ////                self.navigationController?.popViewController( animated: true)
+    ////            }
+    ////        )
+    //
+    //
+    //
+    ////        if (local) {
+    ////            // set playercolor to white
+    ////            self.performSegue(withIdentifier: "PlacePiecesOnlyViewController", sender: self)
+    ////            //set playcolor to black
+    ////            self.performSegue(withIdentifier: "PlacePiecesOnlyViewController", sender: self)
+    ////            self.performSegue(withIdentifier: "LocalMatchSegue", sender: self)//start the game with the current piece placement
+    ////
+    ////        }
+    //
+    //
+    //
+    ////
+    ////        // if online
+    ////        self.processGameUpdate() //Do I still need this or just an endTurn?
+    ////        self.goToMain()
+    //
+    //    }
+    
+    
+    
+    /*-----------------------------------------------------------------------------*/
+    /* SAVE FORMATIONS ------------------------------------------------------------*/
     
     func saveFormation(){
         let ac = UIAlertController(title: "Save Formation", message: nil, preferredStyle: .actionSheet)
@@ -583,11 +712,11 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 randIndex = Int.random(in: 1...(pickerData.count - 1))
                 let string = pickerData[randIndex]
                 var piece = getPiece(string: string)
-//                if row == 1{
-//                    if piece.type == .dragonRider{
-//                        piece = notDragonRider()
-//                    }
-//                }
+                //                if row == 1{
+                //                    if piece.type == .dragonRider{
+                //                        piece = notDragonRider()
+                //                    }
+                //                }
                 piece.row = row
                 piece.col = col
                 piece.color = playerColor
@@ -606,28 +735,30 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             formation = randFormation(numIterations: numIterations + 1)
         }
         //if we've got points to spare, add pieces in the third row
-//        if playerPoints < 440{
-//            while playerPoints < 440{
-//                let col = Int.random(in: 0...7)
-//                randIndex = Int.random(in: 0...(pickerData.count - 1))
-//                let string = pickerData[randIndex]
-//                var piece = getPiece(string: string)
-////                if piece.type == .dragonRider{
-////                    piece = notDragonRider()
-////                }
-//                piece.row = 0
-//                piece.col = col
-//                piece.color = playerColor
-//                piece.setupSymbol()
-//                formation[0][col].row = 0
-//                formation[0][col].column = col
-//                formation[0][col].piece.type = piece.type
-//                formation[0][col].configureCell(forPiece: piece)
-//            }
-//        }
+        //        if playerPoints < 440{
+        //            while playerPoints < 440{
+        //                let col = Int.random(in: 0...7)
+        //                randIndex = Int.random(in: 0...(pickerData.count - 1))
+        //                let string = pickerData[randIndex]
+        //                var piece = getPiece(string: string)
+        ////                if piece.type == .dragonRider{
+        ////                    piece = notDragonRider()
+        ////                }
+        //                piece.row = 0
+        //                piece.col = col
+        //                piece.color = playerColor
+        //                piece.setupSymbol()
+        //                formation[0][col].row = 0
+        //                formation[0][col].column = col
+        //                formation[0][col].piece.type = piece.type
+        //                formation[0][col].configureCell(forPiece: piece)
+        //            }
+        //        }
         boardCells = formation
         return formation
     }
+    
+    
     
     func checkKings(formation: [[BoardCell]]) -> Int{
         for row in 0...2{
@@ -739,137 +870,9 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         pointsRemaining.text = "Points spent: \(playerPoints)"
     }
     
-    func checkNumKings() -> Bool {
-        if numKings(color: playerColor) == 0 {
-            tipLabel.text = "Place a king, then you can play!"
-            let ac = UIAlertController(title: "Rule", message: "You need to place at least one king before you can play", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-            ac.addAction(ok)
-            present(ac, animated: true, completion: nil)
-            return false
-        }
-        
-        return true
-        
-    }
+    /*-----------------------------------------------------------------------------*/
     
     
-    
-    
-    
-    func checkPlayerPoints(){
-        //check if the player has used up enough points (at least 440)
-        if playerPoints < 440{
-            //if not, ask them if they're sure they want to ready up
-            let ac = UIAlertController(title: "Points remaining", message: "You still have points to spend, ready anyway?", preferredStyle: .alert)
-            let yes = UIAlertAction(title: "Ready!", style: .default, handler:
-            { action in
-                self.placePieces();
-            }
-            )
-            let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            ac.addAction(yes)
-            ac.addAction(no)
-            present(ac, animated: true, completion: nil)
-            return
-        }
-        
-        self.placePieces();
-        
-    }
-    
-    func placePieces() {
-        
-        model.setInitialPieces(playerColor: playerColor,boardCells: boardCells)
-        // model.setInitialPieces will flip the position of the black pieces coming from PlacePiecesOnlyViewController
-        
-        if isLocalMatch {
-            print("local match ready button pressed")
-            if playerColor == .white {
-                p2BoardCells = boardCells
-                playerColor = .black
-                clearPieces()
-                setLabels()
-                piecePictureSetup()
-                addStarterKing()
-            } else {
-                localMatchReady()
-            }
-        } else {
-            onlineMatchReady()
-        }
-        
-        
-    }
-    
-    func onlineMatchReady(){
-        
-        print("onlineMatchReady called")
-        
-        if (playerColor == .white && self.model.piecesAreSet) {
-            self.performSegue(withIdentifier: "OnlineMatchSegue", sender: self)//start the game with the current piece placement
-        }
-        GameCenterHelper.helper.endTurn(self.model) { error in
-            defer {
-                print("self.isSendingTurn = false")
-            }
-            
-            if let e = error {
-                print("Error ending turn: \(e.localizedDescription)")
-                return
-            }
-            
-            self.performSegue(withIdentifier: "ReturnToMenuSegue", sender: self)
-        }
-        
-        
-        
-        
-        
-        
-        // tell GameCenterHelper ? that you're ready to play
-        
-        // GameCenterHelper will probably tell you when other player is ready...
-        
-    }
-    
-    func localMatchReady(){
-        print("localMatchReady called")
-        self.performSegue(withIdentifier: "LocalMatchSegue", sender: self)//start the game with the current piece placement
-    }
-    
-    
-    //
-    //    func returnPieces() {
-    //
-    //        // return boardcells to calling view controller, or GameModel.boardcells to these pieces
-    //
-    //        model.setPieces(playerColor: playerColor,boardCells: boardCells);
-    ////        self.dismiss(animated: true, completion: {() in
-    ////                self.navigationController?.popViewController( animated: true)
-    ////            }
-    ////        )
-    //
-    //
-    //
-    ////        if (local) {
-    ////            // set playercolor to white
-    ////            self.performSegue(withIdentifier: "PlacePiecesOnlyViewController", sender: self)
-    ////            //set playcolor to black
-    ////            self.performSegue(withIdentifier: "PlacePiecesOnlyViewController", sender: self)
-    ////            self.performSegue(withIdentifier: "LocalMatchSegue", sender: self)//start the game with the current piece placement
-    ////
-    ////        }
-    //
-    //
-    //
-    ////
-    ////        // if online
-    ////        self.processGameUpdate() //Do I still need this or just an endTurn?
-    ////        self.goToMain()
-    //
-    //    }
     
     //updates the screen when the uipicker changes
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -1110,7 +1113,9 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         for r in 0...7 {
             for c in 0...7 {
                 var pieceBasicInfo = boardCells[r][c].piece.getBasicInfo()
-                model.piecesArray.append(pieceBasicInfo)
+                if pieceBasicInfo.type != .dummy {
+                    model.piecesArray.append(pieceBasicInfo)
+                }
             }
         }
         

@@ -207,6 +207,7 @@
                         <outlet property="demotionImage" destination="1VV-nz-4qt" id="ss9-FK-hJ8"/>
                         <outlet property="levelDownBar" destination="UAh-pg-cud" id="V5h-9I-8kt"/>
                         <outlet property="levelUpBar" destination="Lhs-az-VDT" id="O4C-jR-o0p"/>
+                        <outlet property="playButton" destination="APm-Lx-Pis" id="JFY-D2-9MP"/>
                         <outlet property="promotionImage" destination="LO8-SD-FNp" id="ndk-Dp-ybG"/>
                         <outlet property="rankImage" destination="hfe-DH-WDR" id="Jf9-Me-yKb"/>
                         <segue destination="fhK-sB-HUu" kind="showDetail" identifier="MyFriendsBtSegue" id="x71-Kx-mDm"/>
@@ -923,7 +924,7 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ynr-Ld-Yg9"/>
-        <segue reference="Reh-zF-BU3"/>
+        <segue reference="N8g-z2-68R"/>
         <segue reference="PKa-wr-jw9"/>
         <segue reference="SnD-E2-A2t"/>
     </inferredMetricsTieBreakers>
