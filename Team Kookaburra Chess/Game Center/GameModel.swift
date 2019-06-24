@@ -57,7 +57,7 @@ struct GameModel: Codable{
     var playerIDs = [String?]()
     
     var messageToDisplay: String {
-        return "generic message for now, possibly about who's turn it is"
+        return ""
     }
     
     //    var isCapturingPiece: Bool {

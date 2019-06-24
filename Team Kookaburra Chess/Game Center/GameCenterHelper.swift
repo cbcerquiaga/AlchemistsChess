@@ -128,6 +128,7 @@ final class GameCenterHelper: NSObject, GKGameCenterControllerDelegate {
         }
 
         match.currentParticipant?.matchOutcome = .won
+        match.message = "Game Completed"
         match.others.forEach { other in
             other.matchOutcome = .lost
         }
