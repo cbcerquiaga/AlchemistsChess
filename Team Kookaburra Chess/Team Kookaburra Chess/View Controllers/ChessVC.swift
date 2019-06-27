@@ -440,6 +440,13 @@ extension ChessVC: BoardCellDelegate {
     
     func didSelect(cell: BoardCell, atRow row: Int, andColumn col: Int) {
         print("Selected cell at: \(row), \(col)")
+        if !chessBoard.canPlayerTakeTurn(color: playerColor){
+            if playerColor == .white{
+                gameOver(withWinner: .black, message: "You blocked yourself in and couldn't move")
+            } else { //if playerColor == .black
+                gameOver(withWinner: .white, message: "You blocked yourself in and couldn't move")
+            }
+        }
         //chessBoard.board[row][col].showPieceInfo()
         // Check if making a move (if had selected piece before)
         clearRedCells()
@@ -683,6 +690,14 @@ extension ChessVC: ChessBoardDelegate {
             showGameOver(message: "White player won!")
         } else if winner == .black {
             showGameOver(message: "Black player won!")
+        }
+    }
+    
+    func gameOver(withWinner winner: UIColor, message: String){
+        if winner == .white {
+            showGameOver(message: "White player won! " + message)
+        } else if winner == .black {
+            showGameOver(message: "Black player won! " + message)
         }
     }
     
