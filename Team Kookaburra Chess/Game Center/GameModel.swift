@@ -97,7 +97,7 @@ struct GameModel: Codable{
     mutating func addPlayer() {
         if (GKLocalPlayer.local.isAuthenticated) {
             if (!playerIDs.contains(GKLocalPlayer.local.playerID)){
-                playerIDs.append(GKLocalPlayer.local.playerID);
+                playerIDs.append(GKLocalPlayer.local.playerID)
             }
         }
     }
@@ -188,9 +188,10 @@ struct GameModel: Codable{
         for r in 0...7 {
             for c in 0...7 {
                 var pieceBasicInfo = boardCells[r][c].piece.getBasicInfo()
-                if (playerColor == .black) {
-                    pieceBasicInfo.row = 7 -  pieceBasicInfo.row ;
-                    pieceBasicInfo.col = 7 -  pieceBasicInfo.col ;
+                if (playerColor == .white) { //put put white at the bottom of the screen
+                    pieceBasicInfo.row = 7 -  pieceBasicInfo.row
+                    pieceBasicInfo.col = 7 -  pieceBasicInfo.col
+//                } else { //playerColor == .black, do nothing
                 }
                 piecesArray.append(pieceBasicInfo)
             }
@@ -199,7 +200,7 @@ struct GameModel: Codable{
         if (playerColor == .white) { whiteHasSetPieces = true }
         if (playerColor == .black) { blackHasSetPieces = true }
         
-        //  chessBoard.board = chessBoard.setFormation(playerColor: playerColor, formation: boardCells);
+        //  chessBoard.board = chessBoard.setFormation(playerColor: playerColor, formation: boardCells)
         
     }
     //    mutating func advance() {

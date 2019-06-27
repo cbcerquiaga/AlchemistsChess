@@ -29,7 +29,7 @@ class OpeningScreen: UIViewController {
     var imageView = UIImageView()
     var model: GameModel
     
-    var currentPlayerColor : UIColor =  .white;
+    var currentPlayerColor : UIColor =  .white
     
     required init?(coder aDecoder: NSCoder) {
         self.model = GameModel()
@@ -96,8 +96,8 @@ class OpeningScreen: UIViewController {
                 rankImage.image = UIImage(named: "rankGold.png")
             }
         }
-        let transform = CGAffineTransform(rotationAngle: 3.14159); // Flip view horizontally?
-        levelDownBar.transform = transform;
+        let transform = CGAffineTransform(rotationAngle: 3.14159)// Flip view horizontally?
+        levelDownBar.transform = transform
         //levelDownBar.progress = 0.75 //for test
         if points < 0 {
             levelDownBar.progress = Float(points)/(-10.0)
@@ -281,7 +281,7 @@ class OpeningScreen: UIViewController {
     private func loadAndDisplay(match: GKTurnBasedMatch) {
         // 2 try loading current game data, or start new game if no data
         
-        var noMatchData: Bool = false;
+        var noMatchData: Bool = false
         
         match.loadMatchData { data, error in
             if let data = data {
@@ -291,22 +291,22 @@ class OpeningScreen: UIViewController {
                     self.model = try JSONDecoder().decode(GameModel.self, from: data)
                 } catch {
                     print("creating blank gamemodel since decoding failed")
-                    noMatchData = true;
+                    noMatchData = true
                 }
             } else {
                 print("creating blank gamemodel since data is nil")
-                noMatchData = true;
+                noMatchData = true
             }
             
             if (noMatchData) {
                 // need to start a new Match
-                self.model = GameModel();
+                self.model = GameModel()
                 
                 
                 
             }
             // make sure we are added to the game (no harm if already added)
-            self.model.addPlayer();
+            self.model.addPlayer()
             
             
             

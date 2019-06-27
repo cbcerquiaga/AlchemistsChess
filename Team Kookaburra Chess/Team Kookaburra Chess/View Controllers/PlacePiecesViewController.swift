@@ -79,7 +79,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // TODO: reset from self.model if !isLocalMatch
         
         if (!isLocalMatch) {
-            playerColor =  self.model.localPlayerUIColor() ;
+            playerColor =  self.model.localPlayerUIColor()
         }
         
         setLabels()
@@ -121,7 +121,8 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if (segue.identifier == "LocalMatchSegue") {
             let vc = segue.destination as! ChessVC
             vc.model = model
-            vc.playerColor = playerColor
+            //vc.playerColor = playerColor
+            vc.playerColor = .white
             vc.isLocalMatch = true
             //            if playerColor == .white{
             //                vc.whiteFormation = boardCells
@@ -356,8 +357,8 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             chosenPiece.row = highlightedCell.row
             chosenPiece.col = highlightedCell.col
             highlightedCell.configureCell(forPiece: chosenPiece)
-            //var changedBoardCell = self.boardCells[highlightedCell.row][highlightedCell.column];
-            //NSLog("boardcell changed: \(changedBoardCell.piece.type)");
+            //var changedBoardCell = self.boardCells[highlightedCell.row][highlightedCell.column]
+            //NSLog("boardcell changed: \(changedBoardCell.piece.type)")
             //add summon points
             //print("points before: \(playerPoints)")
             playerPoints = calculateCost()
@@ -563,7 +564,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             let ac = UIAlertController(title: "Points remaining", message: "You still have points to spend, ready anyway?", preferredStyle: .alert)
             let yes = UIAlertAction(title: "Ready!", style: .default, handler:
             { action in
-                self.placePieces();
+                self.placePieces()
             }
             )
             let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -574,7 +575,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             return
         }
         
-        self.placePieces();
+        self.placePieces()
         
     }
     
@@ -644,7 +645,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
     //
     //        // return boardcells to calling view controller, or GameModel.boardcells to these pieces
     //
-    //        model.setPieces(playerColor: playerColor,boardCells: boardCells);
+    //        model.setPieces(playerColor: playerColor,boardCells: boardCells)
     ////        self.dismiss(animated: true, completion: {() in
     ////                self.navigationController?.popViewController( animated: true)
     ////            }
@@ -855,7 +856,6 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         for row in 0...2{
             for col in 0...7{
                 if boardCells[row][col].piece.type != .dummy{
-                    print("Fucking work!")
                     boardCells[row][col].piece.setupSymbol()
                     var piece = ChessPiece(row: 0, column: 0, color: playerColor, type: boardCells[row][col].piece.type, player: playerColor)
                     piece.row = row
@@ -1159,7 +1159,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func stringArrayToBoardCellRow(row: Int, array: [String]){
         for col in 0...7{
             boardCells[row][col].piece = getPiece(string: array[col])
-            print("Type at \(row), \(col): \(boardCells[row][col].piece.type)")
+            //print("Type at \(row), \(col): \(boardCells[row][col].piece.type)")
         }
     }
     

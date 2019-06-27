@@ -42,7 +42,7 @@ class BoardCell: UIView {
         self.color = color
         
         self.pieceImageView =  UIImageView(image: piece.symbolImage)
-        let imageOffsetY:CGFloat = -5.0;
+        let imageOffsetY:CGFloat = -5.0
         self.pieceImageView.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
         
         
@@ -66,8 +66,8 @@ class BoardCell: UIView {
         //Add your text to mutable string
         let  textAfterIcon = NSMutableAttributedString(string: "")
         completeText.append(textAfterIcon)
-        pieceLabel.textAlignment = .center;
-        pieceLabel.attributedText = completeText;
+        pieceLabel.textAlignment = .center
+        pieceLabel.attributedText = completeText
         //pieceLabel.text = piece.symbol
         pieceLabel.textColor = piece.color
         
@@ -107,7 +107,7 @@ class BoardCell: UIView {
         let imageAttachment =  NSTextAttachment()
         imageAttachment.image = UIImage(named: piece.symbol)
         //Set bound to reposition
-        let imageOffsetY:CGFloat = -5.0;
+        let imageOffsetY:CGFloat = -5.0
         imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: 50, height: 50)
         //Create string with attachment
         let attachmentString = NSAttributedString(attachment: imageAttachment)
@@ -118,8 +118,8 @@ class BoardCell: UIView {
         //Add your text to mutable string
         let textAfterIcon = NSMutableAttributedString(string: "")
         completeText.append(textAfterIcon)
-        pieceLabel.textAlignment = .center;
-        pieceLabel.attributedText = completeText;
+        pieceLabel.textAlignment = .center
+        pieceLabel.attributedText = completeText
         pieceLabel.text = piece.symbol
         pieceLabel.textColor = piece.color
         backgroundColor = color

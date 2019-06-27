@@ -359,7 +359,7 @@ class ChessVC: UIViewController {
     
     func setGameCenterModelFromFormation() {
         
-        setModelFromFormation(aModel: &self.model);
+        setModelFromFormation(aModel: &self.model)
         
     }
     
@@ -439,7 +439,7 @@ class ChessVC: UIViewController {
 extension ChessVC: BoardCellDelegate {
     
     func didSelect(cell: BoardCell, atRow row: Int, andColumn col: Int) {
-        //print("Selected cell at: \(row), \(col)")
+        print("Selected cell at: \(row), \(col)")
         //chessBoard.board[row][col].showPieceInfo()
         // Check if making a move (if had selected piece before)
         clearRedCells()
@@ -602,9 +602,9 @@ extension ChessVC: BoardCellDelegate {
         
         if (!isLocalMatch) {
             
-            setGameCenterModelFromFormation();
+            setGameCenterModelFromFormation()
             
-            self.model.isWhiteTurn = !self.model.isWhiteTurn;
+            self.model.isWhiteTurn = !self.model.isWhiteTurn
             
             GameCenterHelper.helper.endTurn(self.model) { error in
                 defer {
