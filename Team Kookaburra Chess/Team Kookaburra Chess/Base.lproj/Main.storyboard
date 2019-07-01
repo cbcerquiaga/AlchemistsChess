@@ -118,7 +118,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="quickTestButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NEL-IR-Bij"/>
+                                    <action selector="localMatchButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NEL-IR-Bij"/>
                                     <segue destination="eT3-ZL-FIO" kind="showDetail" identifier="PlacePiecesSegue" id="gjB-tX-g2I"/>
                                 </connections>
                             </button>
@@ -212,7 +212,6 @@
                         <outlet property="rankImage" destination="hfe-DH-WDR" id="Jf9-Me-yKb"/>
                         <segue destination="fhK-sB-HUu" kind="showDetail" identifier="MyFriendsBtSegue" id="x71-Kx-mDm"/>
                         <segue destination="zEu-Gh-aaY" kind="showDetail" identifier="MyStatsSegue" id="ikF-3A-UMu"/>
-                        <segue destination="59Q-8H-ows" kind="showDetail" identifier="QuickTestSegue" id="5Ru-Ct-ZdM"/>
                         <segue destination="zVE-eY-227" kind="showDetail" identifier="OnlineChessVCSegue" id="N8g-z2-68R"/>
                     </connections>
                 </viewController>

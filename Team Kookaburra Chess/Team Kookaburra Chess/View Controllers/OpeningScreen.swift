@@ -195,7 +195,7 @@ class OpeningScreen: UIViewController {
         GameCenterHelper.helper.presentMatchmaker()
     }
     
-    @IBAction func quickTestButtonPressed(_ sender: Any) {
+    @IBAction func localMatchButtonPressed(_ sender: Any) {
         //self.performSegue(withIdentifier: "QuickTestSegue", sender: self)
         
         currentPlayerColor = .white
