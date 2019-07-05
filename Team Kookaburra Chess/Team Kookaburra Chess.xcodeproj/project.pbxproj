@@ -34,6 +34,19 @@
 		252FB31B228A4DFD0051A134 /* whiteThunderChariot.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */; };
 		252FB31D228A4E050051A134 /* blackThunderChariot.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB31C228A4E040051A134 /* blackThunderChariot.png */; };
 		253D9F0A22CF899500A45DB4 /* RWGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0922CF899500A45DB4 /* RWGameData.swift */; };
+		253D9F0D22CF90A700A45DB4 /* BasicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */; };
+		253D9F0F22CF90BE00A45DB4 /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */; };
+		253D9F1122CF90DB00A45DB4 /* HowToPlacePiecesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1022CF90DB00A45DB4 /* HowToPlacePiecesViewController.swift */; };
+		253D9F1322CF90F300A45DB4 /* HowToStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1222CF90F300A45DB4 /* HowToStoreViewController.swift */; };
+		253D9F1522CF912300A45DB4 /* TypesOfMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1422CF912300A45DB4 /* TypesOfMatchesViewController.swift */; };
+		253D9F1722CF913500A45DB4 /* AdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1622CF913500A45DB4 /* AdvancedViewController.swift */; };
+		253D9F1922CF914800A45DB4 /* ChangesFromChessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1822CF914800A45DB4 /* ChangesFromChessViewController.swift */; };
+		253D9F1B22CF915E00A45DB4 /* RankingSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1A22CF915E00A45DB4 /* RankingSystemViewController.swift */; };
+		253D9F1D22CF917000A45DB4 /* EaringGoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1C22CF917000A45DB4 /* EaringGoldViewController.swift */; };
+		253D9F1F22CF918100A45DB4 /* StrategyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F1E22CF918100A45DB4 /* StrategyViewController.swift */; };
+		253D9F2122CF919200A45DB4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F2022CF919200A45DB4 /* AboutViewController.swift */; };
+		253D9F2322CF91A500A45DB4 /* InspirationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F2222CF91A500A45DB4 /* InspirationsViewController.swift */; };
+		253D9F2522CF91B000A45DB4 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F2422CF91B000A45DB4 /* CreditsViewController.swift */; };
 		25415E31224A981000B7E13E /* blackBombard.png in Resources */ = {isa = PBXBuildFile; fileRef = 25415E30224A981000B7E13E /* blackBombard.png */; };
 		25415E33224A981500B7E13E /* blackDragonRider.png in Resources */ = {isa = PBXBuildFile; fileRef = 25415E32224A981500B7E13E /* blackDragonRider.png */; };
 		25415E35224A981C00B7E13E /* blackGriffin.png in Resources */ = {isa = PBXBuildFile; fileRef = 25415E34224A981C00B7E13E /* blackGriffin.png */; };
@@ -213,6 +226,19 @@
 		252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteThunderChariot.png; sourceTree = "<group>"; };
 		252FB31C228A4E040051A134 /* blackThunderChariot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackThunderChariot.png; sourceTree = "<group>"; };
 		253D9F0922CF899500A45DB4 /* RWGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWGameData.swift; sourceTree = "<group>"; };
+		253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
+		253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
+		253D9F1022CF90DB00A45DB4 /* HowToPlacePiecesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlacePiecesViewController.swift; sourceTree = "<group>"; };
+		253D9F1222CF90F300A45DB4 /* HowToStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToStoreViewController.swift; sourceTree = "<group>"; };
+		253D9F1422CF912300A45DB4 /* TypesOfMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfMatchesViewController.swift; sourceTree = "<group>"; };
+		253D9F1622CF913500A45DB4 /* AdvancedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedViewController.swift; sourceTree = "<group>"; };
+		253D9F1822CF914800A45DB4 /* ChangesFromChessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesFromChessViewController.swift; sourceTree = "<group>"; };
+		253D9F1A22CF915E00A45DB4 /* RankingSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingSystemViewController.swift; sourceTree = "<group>"; };
+		253D9F1C22CF917000A45DB4 /* EaringGoldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaringGoldViewController.swift; sourceTree = "<group>"; };
+		253D9F1E22CF918100A45DB4 /* StrategyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyViewController.swift; sourceTree = "<group>"; };
+		253D9F2022CF919200A45DB4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		253D9F2222CF91A500A45DB4 /* InspirationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationsViewController.swift; sourceTree = "<group>"; };
+		253D9F2422CF91B000A45DB4 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		25415E30224A981000B7E13E /* blackBombard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackBombard.png; sourceTree = "<group>"; };
 		25415E32224A981500B7E13E /* blackDragonRider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackDragonRider.png; sourceTree = "<group>"; };
 		25415E34224A981C00B7E13E /* blackGriffin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackGriffin.png; sourceTree = "<group>"; };
@@ -545,6 +571,26 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		253D9F0B22CF907F00A45DB4 /* Help Screens */ = {
+			isa = PBXGroup;
+			children = (
+				253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */,
+				253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */,
+				253D9F1022CF90DB00A45DB4 /* HowToPlacePiecesViewController.swift */,
+				253D9F1222CF90F300A45DB4 /* HowToStoreViewController.swift */,
+				253D9F1422CF912300A45DB4 /* TypesOfMatchesViewController.swift */,
+				253D9F1622CF913500A45DB4 /* AdvancedViewController.swift */,
+				253D9F1822CF914800A45DB4 /* ChangesFromChessViewController.swift */,
+				253D9F1A22CF915E00A45DB4 /* RankingSystemViewController.swift */,
+				253D9F1C22CF917000A45DB4 /* EaringGoldViewController.swift */,
+				253D9F1E22CF918100A45DB4 /* StrategyViewController.swift */,
+				253D9F2022CF919200A45DB4 /* AboutViewController.swift */,
+				253D9F2222CF91A500A45DB4 /* InspirationsViewController.swift */,
+				253D9F2422CF91B000A45DB4 /* CreditsViewController.swift */,
+			);
+			path = "Help Screens";
+			sourceTree = "<group>";
+		};
 		643430A92253C50900E0CB24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +642,7 @@
 		88E34F37225029EE007ED2F5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				253D9F0B22CF907F00A45DB4 /* Help Screens */,
 				251D1F972240757800AD7CE4 /* ChessVC.swift */,
 				251D1F5F22403DAD00AD7CE4 /* GameViewController.swift */,
 				88198250224E7D12008E8EFD /* PlayBtOpeningScreenViewController.swift */,
@@ -887,22 +934,35 @@
 				251D1F902240746C00AD7CE4 /* BoardIndex.swift in Sources */,
 				88E34F3922502A2D007ED2F5 /* HowToViewController.swift in Sources */,
 				251D1F6022403DAD00AD7CE4 /* GameViewController.swift in Sources */,
+				253D9F1722CF913500A45DB4 /* AdvancedViewController.swift in Sources */,
+				253D9F1122CF90DB00A45DB4 /* HowToPlacePiecesViewController.swift in Sources */,
 				251D1F962240751500AD7CE4 /* ChessPiece.swift in Sources */,
 				8819824D224E7BBA008E8EFD /* StoreViewController.swift in Sources */,
 				88E34F3D225032E5007ED2F5 /* NewGameViewController.swift in Sources */,
 				6440829E22593E70006563AB /* GameCenterHelper.swift in Sources */,
+				253D9F0D22CF90A700A45DB4 /* BasicsViewController.swift in Sources */,
 				88E34F41225036A6007ED2F5 /* RandomOpponentViewController.swift in Sources */,
 				251D1F9A224075CE00AD7CE4 /* ChessView.swift in Sources */,
 				647897CA227A8835003A2C2E /* OnlineGameScene.swift in Sources */,
 				251D1F8E2240743D00AD7CE4 /* BoardCelll.swift in Sources */,
+				253D9F1322CF90F300A45DB4 /* HowToStoreViewController.swift in Sources */,
+				253D9F2122CF919200A45DB4 /* AboutViewController.swift in Sources */,
 				25147074226FC0B10042F548 /* BuyGoldViewController.swift in Sources */,
 				88E34F3F2250341C007ED2F5 /* YourFriendsViewController.swift in Sources */,
 				8819824B224E7948008E8EFD /* MyFriendsViewController.swift in Sources */,
+				253D9F2522CF91B000A45DB4 /* CreditsViewController.swift in Sources */,
 				251D1F92224074A800AD7CE4 /* ChessBoard.swift in Sources */,
+				253D9F1D22CF917000A45DB4 /* EaringGoldViewController.swift in Sources */,
 				251D1F9E22407A7700AD7CE4 /* AppDelegate.swift in Sources */,
 				251D1F982240757800AD7CE4 /* ChessVC.swift in Sources */,
+				253D9F1F22CF918100A45DB4 /* StrategyViewController.swift in Sources */,
+				253D9F1B22CF915E00A45DB4 /* RankingSystemViewController.swift in Sources */,
+				253D9F2322CF91A500A45DB4 /* InspirationsViewController.swift in Sources */,
+				253D9F0F22CF90BE00A45DB4 /* GettingStartedViewController.swift in Sources */,
 				646A3EA52263E39C00378BEB /* GKTurnBasedMatch+Additions.swift in Sources */,
 				254815072252DF5D007C1174 /* LevelUpProgress.swift in Sources */,
+				253D9F1922CF914800A45DB4 /* ChangesFromChessViewController.swift in Sources */,
+				253D9F1522CF912300A45DB4 /* TypesOfMatchesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
