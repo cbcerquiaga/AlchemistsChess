@@ -564,7 +564,7 @@ extension ChessVC: BoardCellDelegate {
             }
         }
         possibleMoves = chessBoard.getPossibleMoves(forPiece: cell.piece)
-        if cell.piece.color == playerTurn{
+        if cell.piece.color == playerColor {
             highlightPossibleMoves()
             cell.backgroundColor = cell.hexStringToUIColor(hex:"6DAFFB")
         } else {
@@ -683,6 +683,8 @@ extension ChessVC: ChessBoardDelegate {
     }
     
     func gameOver(withWinner winner: UIColor) {
+        self.model.setWinner(winning_color:winner);
+
         if winner == .white {
             showGameOver(message: "White player won!")
         } else if winner == .black {
@@ -691,6 +693,7 @@ extension ChessVC: ChessBoardDelegate {
     }
     
     func gameOver(withWinner winner: UIColor, message: String){
+        self.model.setWinner(winning_color:winner);
         if winner == .white {
             showGameOver(message: "White player won! " + message)
         } else if winner == .black {

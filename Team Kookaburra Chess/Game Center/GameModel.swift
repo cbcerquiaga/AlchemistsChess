@@ -51,6 +51,9 @@ struct GameModel: Codable{
     //var pieceNamesArray = [[String]](repeating: [String](repeating: 0, count: 8), count: 8) //8 by 8 array of Strings
     
     var winner: PlayerColor? = nil
+    var forfeited: Bool = false
+    var tied: Bool = false
+
     
     var playerColors = [PlayerColor](repeating:.white,count:2)
     
@@ -262,6 +265,22 @@ struct GameModel: Codable{
     //
     //        return false
     //    }
+
+
+    mutating func setWinner(winning_color: UIColor) {
+
+        winner = .white == winning_color ? .white : .black;
+
+
+    }
+
+    func isGameOver() -> Bool {
+
+       return (nil != winner || forfeited || tied )
+
+    }
+
+
 }
 
 
