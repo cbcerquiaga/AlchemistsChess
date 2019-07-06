@@ -226,9 +226,12 @@ struct GameModel: Codable{
             for c in 0...7 {
                 var pieceBasicInfo = boardCells[r][c].piece.getBasicInfo()
                 if (playerColor == .white) { //put put white at the bottom of the screen
-                    pieceBasicInfo.row = 7 -  pieceBasicInfo.row
+                    pieceBasicInfo.row = 7 -  (2 - pieceBasicInfo.row)
                     pieceBasicInfo.col = 7 -  pieceBasicInfo.col
-//                } else { //playerColor == .black, do nothing
+                } else { //playerColor == .black
+                    //pieces need to be flipped vertically by 2 rows and horizontally by 7
+                    pieceBasicInfo.row = 2 - pieceBasicInfo.row
+                    pieceBasicInfo.col = 7 -  pieceBasicInfo.col
                 }
                 if pieceBasicInfo.type != .dummy {
                     piecesArray.append(pieceBasicInfo)
