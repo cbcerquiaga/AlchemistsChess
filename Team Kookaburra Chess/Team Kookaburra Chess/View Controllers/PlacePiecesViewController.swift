@@ -568,13 +568,13 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             }
             )
             let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
+
             ac.addAction(yes)
             ac.addAction(no)
             present(ac, animated: true, completion: nil)
             return
         }
-        
+
         self.placePieces()
         
     }
