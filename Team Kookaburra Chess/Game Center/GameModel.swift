@@ -131,6 +131,24 @@ struct GameModel: Codable{
         if (pcolor == .white) {  return .white } else { return .black }
     }
     
+    mutating func setPlayerPiecesAreSet(piecesColor: UIColor ) {
+    
+        let previousPiecesAreSet = piecesAreSet
+        
+        if (.white == piecesColor) {
+            whiteHasSetPieces = true
+        }
+        if (.black == piecesColor) {
+            blackHasSetPieces = true
+        }
+        piecesAreSet = whiteHasSetPieces && blackHasSetPieces
+        
+        if (!previousPiecesAreSet && piecesAreSet) {
+             isWhiteTurn = true
+        }
+    
+    }
+    
     mutating func checkPiecesAreSet(){
         piecesAreSet = whiteHasSetPieces && blackHasSetPieces
         if (piecesAreSet){
@@ -149,6 +167,10 @@ struct GameModel: Codable{
     }
     
     mutating func updateTurn() {
+    
+        // ?? should just be  self.isWhiteTurn = !isWhiteTurn 
+        // because initial white turn handled by  setPlayerPiecesAreSet
+        
         print("mode.updateTurn called. whiteHasSetPieces = \(self.whiteHasSetPieces). blackHasSetPieces = \(self.blackHasSetPieces)")
         //neitherHasSetPieces = true
         if(!piecesAreSet){
@@ -193,14 +215,13 @@ struct GameModel: Codable{
                     pieceBasicInfo.col = 7 -  pieceBasicInfo.col
 //                } else { //playerColor == .black, do nothing
                 }
-                piecesArray.append(pieceBasicInfo)
+                if pieceBasicInfo.type != .dummy {
+                    piecesArray.append(pieceBasicInfo)
+               }
             }
         }
         
-        if (playerColor == .white) { whiteHasSetPieces = true }
-        if (playerColor == .black) { blackHasSetPieces = true }
-        
-        //  chessBoard.board = chessBoard.setFormation(playerColor: playerColor, formation: boardCells)
+       setPlayerPiecesAreSet(piecesColor: playerColor)
         
     }
     //    mutating func advance() {
