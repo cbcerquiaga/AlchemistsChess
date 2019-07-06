@@ -130,7 +130,20 @@ struct GameModel: Codable{
         
         if (pcolor == .white) {  return .white } else { return .black }
     }
-    
+
+
+    func currentPlayerTurnColor() -> UIColor {
+        return isWhiteTurn ? .white : .black
+    }
+
+
+    func isLocalPlayerTurn() -> Bool {
+
+        return localPlayerUIColor() == currentPlayerTurnColor();
+    }
+
+
+
     mutating func setPlayerPiecesAreSet(piecesColor: UIColor ) {
     
         let previousPiecesAreSet = piecesAreSet
@@ -155,6 +168,8 @@ struct GameModel: Codable{
             isWhiteTurn = true
         }
     }
+
+
     
     func randomPlayer() -> Bool {
         //print("randomPlayer called")

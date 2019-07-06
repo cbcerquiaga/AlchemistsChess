@@ -123,7 +123,7 @@ class ChessVC: UIViewController {
             // TODO: could reference self.model directly and get rid of self.playColor and self.playerTurn
             // but that would mean putting localMatch into a local model
             self.playerColor = self.model.localPlayerUIColor()
-            self.playerTurn = self.model.isWhiteTurn ? .white : .black
+            self.playerTurn = self.model.currentPlayerTurnColor()
             
         } // not a local match
         
@@ -240,7 +240,7 @@ class ChessVC: UIViewController {
             let color = playerTurn == .white ? "White" : "Black"
             turnLabel.text = "\(color) player's turn"
         } else {
-            if self.model.localPlayerUIColor() == playerTurn{
+            if self.model.isLocalPlayerTurn() {
                 turnLabel.text = "Your turn"
             } else {
                 //let oppID = getOppIDfromModel()
@@ -463,10 +463,8 @@ extension ChessVC: BoardCellDelegate {
                         
                         
                         // TODO:  call match.canTakeTurnForCurrentMatch instead?
-                        
-                        let localPlayerTurn = (self.model.isWhiteTurn == (playerColor == .white))
-                        
-                        if (localPlayerTurn && chessBoard.canPlayerTakeTurn(color: self.model.localPlayerUIColor())) {
+
+                        if (self.model.isLocalPlayerTurn() && chessBoard.canPlayerTakeTurn(color: self.model.localPlayerUIColor())) {
                             
                             chessBoard.move(chessPiece: movingPiece, fromIndex: source, toIndex: dest)
                             
@@ -596,6 +594,9 @@ extension ChessVC: BoardCellDelegate {
     func endGameCenterTurn(){
         
         self.model.updateTurn()
+
+        // keep ChessVC in sync with model
+        playerTurn = self.model.currentPlayerTurnColor()
         
         //        if chessBoard.isPlayerUnderCheck(playerColor: playerTurn) {
         //            checkLabel.text = "You are in check"
@@ -607,24 +608,21 @@ extension ChessVC: BoardCellDelegate {
         // copy state of chess board into gamecenter model self.model.piecesArray
         // switch the current player by inverting self.model.isWhiteTurn
         
-        if (!isLocalMatch) {
-            
-            setGameCenterModelFromFormation()
-            
-            self.model.isWhiteTurn = !self.model.isWhiteTurn
-            
-            GameCenterHelper.helper.endTurn(self.model) { error in
-                defer {
-                    print("self.isSendingTurn = false")
-                }
-                
-                if let e = error {
-                    print("Error ending turn: \(e.localizedDescription)")
-                    return
-                }
-                
-                // self.returnToMenu()
+        setGameCenterModelFromFormation()
+
+        self.model.isWhiteTurn = !self.model.isWhiteTurn
+
+        GameCenterHelper.helper.endTurn(self.model) { error in
+            defer {
+                print("self.isSendingTurn = false")
             }
+
+            if let e = error {
+                print("Error ending turn: \(e.localizedDescription)")
+                return
+            }
+
+            // self.returnToMenu()
         }
     }
     
