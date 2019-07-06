@@ -181,25 +181,10 @@ struct GameModel: Codable{
         }
     }
     
-    mutating func updateTurn() {
+    mutating func switchCurrentPlayer() {
     
-        // ?? should just be  self.isWhiteTurn = !isWhiteTurn 
-        // because initial white turn handled by  setPlayerPiecesAreSet
-        
-        print("mode.updateTurn called. whiteHasSetPieces = \(self.whiteHasSetPieces). blackHasSetPieces = \(self.blackHasSetPieces)")
-        //neitherHasSetPieces = true
-        if(!piecesAreSet){
-            if(whiteHasSetPieces){
-                isWhiteTurn = false
-            } else {
-                isWhiteTurn = true
-            }
-        }
-        checkPiecesAreSet()
-        //probably need something to check if first move and make white's turn
-        if (piecesAreSet){
-            self.isWhiteTurn = !isWhiteTurn
-        }
+        self.isWhiteTurn = !isWhiteTurn
+
         print("end of gameModel.updateturn. isWhiteTurn = \(self.isWhiteTurn)")
     }
     

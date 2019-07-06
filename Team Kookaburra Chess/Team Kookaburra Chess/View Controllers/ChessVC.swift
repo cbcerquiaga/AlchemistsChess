@@ -592,26 +592,21 @@ extension ChessVC: BoardCellDelegate {
     }
     
     func endGameCenterTurn(){
-        
-        self.model.updateTurn()
 
-        // keep ChessVC in sync with model
-        playerTurn = self.model.currentPlayerTurnColor()
-        
         //        if chessBoard.isPlayerUnderCheck(playerColor: playerTurn) {
         //            checkLabel.text = "You are in check"
         //        } else {
         //            checkLabel.text = ""
         //        }
-        updateLabel()
-        
+
+        // update turn (i.e. switch current turn color) in game center model
+        self.model.switchCurrentPlayer()
+
         // copy state of chess board into gamecenter model self.model.piecesArray
-        // switch the current player by inverting self.model.isWhiteTurn
-        
         setGameCenterModelFromFormation()
 
-        self.model.isWhiteTurn = !self.model.isWhiteTurn
-
+        // tell game center that turn has ended
+        // this will sync local model with gamecenter and notify other player
         GameCenterHelper.helper.endTurn(self.model) { error in
             defer {
                 print("self.isSendingTurn = false")
@@ -622,8 +617,12 @@ extension ChessVC: BoardCellDelegate {
                 return
             }
 
-            // self.returnToMenu()
         }
+
+        // keep ChessVC in sync with model
+        playerTurn = self.model.currentPlayerTurnColor()
+        updateLabel()
+
     }
     
     func highlightPossibleMoves() {

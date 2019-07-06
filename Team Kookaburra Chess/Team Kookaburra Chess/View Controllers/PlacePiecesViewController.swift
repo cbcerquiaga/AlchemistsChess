@@ -1124,7 +1124,7 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
         } else {
             model.blackHasSetPieces = true
         }
-        model.updateTurn()
+        model.switchCurrentPlayer()
         if model.winner != nil {
             GameCenterHelper.helper.win { error in
                 
