@@ -718,6 +718,7 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
                                 <state key="normal" title="READY!"/>
                                 <connections>
                                     <action selector="readyButtonPressed:" destination="eT3-ZL-FIO" eventType="touchUpInside" id="gEl-mp-afd"/>
+                                    <segue destination="zVE-eY-227" kind="showDetail" identifier="OnlineMatchSegue" id="hR9-Ht-guD"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O6j-pA-S0W" userLabel="Piece Image">
@@ -1118,8 +1119,8 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ynr-Ld-Yg9"/>
-        <segue reference="N8g-z2-68R"/>
+        <segue reference="hR9-Ht-guD"/>
         <segue reference="PKa-wr-jw9"/>
-        <segue reference="jpc-O9-TBa"/>
+        <segue reference="SnD-E2-A2t"/>
     </inferredMetricsTieBreakers>
 </document>
