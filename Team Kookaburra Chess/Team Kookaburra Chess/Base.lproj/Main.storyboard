@@ -43,20 +43,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lhs-az-VDT" userLabel="Level Up Progress">
-                                <rect key="frame" x="201" y="94" width="193" height="1.5"/>
+                                <rect key="frame" x="201" y="93" width="193" height="1.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="TML-8I-9y5"/>
                                 </constraints>
                             </progressView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UAh-pg-cud" userLabel="Level down progress">
-                                <rect key="frame" x="8" y="94" width="193" height="1.5"/>
+                                <rect key="frame" x="8" y="93" width="193" height="1.5"/>
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="XfK-NI-1Y5"/>
                                 </constraints>
                             </progressView>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-cL-FoF">
-                                <rect key="frame" x="0.0" y="305.5" width="414" height="45"/>
+                                <rect key="frame" x="0.0" y="304.5" width="414" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="N7r-px-FlJ"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1VV-nz-4qt" userLabel="demotion image">
-                                <rect key="frame" x="12" y="42" width="33" height="50"/>
+                                <rect key="frame" x="12" y="42" width="33" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="49" id="HfF-b6-UBL"/>
                                     <constraint firstAttribute="height" constant="50" id="Kms-LF-IQ0"/>
@@ -141,7 +141,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LO8-SD-FNp" userLabel="promotion image">
-                                <rect key="frame" x="361" y="43.5" width="33" height="50"/>
+                                <rect key="frame" x="361" y="43.5" width="33" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="qj4-qf-TeI"/>
                                 </constraints>
@@ -212,7 +212,7 @@
                         <outlet property="rankImage" destination="hfe-DH-WDR" id="Jf9-Me-yKb"/>
                         <segue destination="fhK-sB-HUu" kind="showDetail" identifier="MyFriendsBtSegue" id="x71-Kx-mDm"/>
                         <segue destination="zEu-Gh-aaY" kind="showDetail" identifier="MyStatsSegue" id="ikF-3A-UMu"/>
-                        <segue destination="zVE-eY-227" kind="showDetail" identifier="OnlineChessVCSegue" id="N8g-z2-68R"/>
+                        <segue destination="zVE-eY-227" kind="show" identifier="OnlineChessVCSegue" id="N8g-z2-68R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -838,7 +838,7 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
                         <outlet property="tipLabel" destination="lBF-bP-iXx" id="a6d-LS-J6v"/>
                         <outlet property="yourColor" destination="Iys-yO-tj8" id="puq-K8-Tb0"/>
                         <segue destination="zVE-eY-227" kind="show" identifier="LocalMatchSegue" id="Reh-zF-BU3"/>
-                        <segue destination="zVE-eY-227" kind="showDetail" identifier="OnlineMatchSegue" id="lUS-j8-hhW"/>
+                        <segue destination="zVE-eY-227" kind="show" identifier="OnlineMatchSegue" id="lUS-j8-hhW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZC-Vp-5Mu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1119,8 +1119,8 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ynr-Ld-Yg9"/>
-        <segue reference="lUS-j8-hhW"/>
+        <segue reference="N8g-z2-68R"/>
         <segue reference="gjB-tX-g2I"/>
-        <segue reference="SnD-E2-A2t"/>
+        <segue reference="HNR-C8-Mxw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -272,8 +272,11 @@ class OpeningScreen: UIViewController {
         guard let match = notification.object as? GKTurnBasedMatch else {
             return
         }
-        
-        loadAndDisplay(match: match)
+
+        // only respond if opening screen view is current view
+        if (self.isViewLoaded) {
+            loadAndDisplay(match: match)
+        }
     }
     
     // MARK: - Helpers
@@ -323,6 +326,7 @@ class OpeningScreen: UIViewController {
             // set up pieces for player's initial position, or go to board for your turn
             if (self.model.piecesAreSet) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    print("Performing segue to OnlineChessVCSegue");
                     self.performSegue(withIdentifier: "OnlineChessVCSegue", sender: self)
                 }
                 
@@ -372,9 +376,18 @@ class OpeningScreen: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "OnlineChessVCSegue") {
             print("prepare for onlineChessVCSegue called")
-            let vc = segue.destination as! ChessVC
-            vc.model = self.model
-            vc.isLocalMatch = false
+            let chessVC = segue.destination as! ChessVC
+                chessVC.model = self.model
+                chessVC.isLocalMatch = false
+                chessVC.updateFromModel();
+//                let viewLoaded = chessVC.isViewLoaded
+//                let viewWindow = chessVC.view.window
+//                if (chessVC.isViewLoaded && nil != chessVC.view.window) {
+//                    // viewController is visible so just tell it to redisplay
+//                    chessVC.updateFromModel();
+//                    chessVC.view.setNeedsDisplay()
+//                }
+
         } else if (segue.identifier == "OnlinePlacePiecesSegue") {
             print("prepare for OnlinePlacePiecesSegue called")
             let vc = segue.destination as! PlacePiecesViewController

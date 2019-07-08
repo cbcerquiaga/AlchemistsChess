@@ -272,11 +272,12 @@ extension GameCenterHelper: GKLocalPlayerListener {
             currentMatchmakerVC = nil
             vc.dismiss(animated: true)
         }
-        
-        guard didBecomeActive else {
-            return
-        }
-        
+
+         // ignore guard, go ahead and display the game, even if not our turn?
+//        guard didBecomeActive else {
+//            return
+//        }
+        print("receivedTurnEvent for me \(didBecomeActive)");
         NotificationCenter.default.post(name: .presentGame, object: match)
     }
 }

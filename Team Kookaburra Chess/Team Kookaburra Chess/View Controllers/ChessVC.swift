@@ -10,6 +10,7 @@
 
 
 import UIKit
+import GameKit
 
 class ChessVC: UIViewController {
     
@@ -82,7 +83,13 @@ class ChessVC: UIViewController {
         self.model = GameModel()
         self.resetModel = GameModel()
         super.init(nibName:nil , bundle:nil)
-        print("  fatalError(\"init(coder:) has not been implemented\")")
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(presentGame(_:)),
+            name: .presentGame,
+            object: nil
+        )
     }
     
     //     from anthony
@@ -116,14 +123,7 @@ class ChessVC: UIViewController {
         // if online match, reset board using self.model
         if (!isLocalMatch) {
             
-            // copy pieces from self.model.piecesArray
-            self.setFormationFromGameCenterModel()
-            
-            // set local player color and turn
-            // TODO: could reference self.model directly and get rid of self.playColor and self.playerTurn
-            // but that would mean putting localMatch into a local model
-            self.playerColor = self.model.localPlayerUIColor()
-            self.playerTurn = self.model.currentPlayerTurnColor()
+            updateFromModel();
             
         } // not a local match
         
@@ -312,7 +312,25 @@ class ChessVC: UIViewController {
         setFormationFromModel(aModel:self.resetModel)
         
     }
-    
+
+    func updateFromModel() {
+
+        // copy pieces from self.model.piecesArray
+        self.setFormationFromGameCenterModel()
+
+        // set local player color and turn
+        // TODO: could reference self.model directly and get rid of self.playColor and self.playerTurn
+        // but that would mean putting localMatch into a local model
+        self.playerColor = self.model.localPlayerUIColor()
+        self.playerTurn = self.model.currentPlayerTurnColor()
+
+        // set local player color and turn
+        // TODO: could reference self.model directly and get rid of self.playColor and self.playerTurn
+        // but that would mean putting localMatch into a local model
+        self.playerColor = self.model.localPlayerUIColor()
+        self.playerTurn = self.model.currentPlayerTurnColor()
+
+    }
     func setFormationFromGameCenterModel() {
         
         setFormationFromModel(aModel:self.model)
@@ -609,7 +627,7 @@ extension ChessVC: BoardCellDelegate {
         // this will sync local model with gamecenter and notify other player
         GameCenterHelper.helper.endTurn(self.model) { error in
             defer {
-                print("self.isSendingTurn = false")
+                print("endGameCenterTurn")
             }
 
             if let e = error {
@@ -742,6 +760,72 @@ extension ChessVC: ChessBoardDelegate {
         ac.addAction(noAction)
         present(ac, animated: true, completion: nil)
     }
+
+
+    @objc private func presentGame(_ notification: Notification) {
+
+        print("presentGame called, ChessVC responding")
+
+        return
+
+
+        // 1
+        guard let match = notification.object as? GKTurnBasedMatch else {
+            return
+        }
+
+        // only respond if opening screen view is current view
+        if (self.isViewLoaded) {
+            print("need to get model from game center and redraw screen")
+
+                var noMatchData: Bool = false
+
+                match.loadMatchData { data, error in
+                    if let data = data {
+                        do {
+                            // 3
+                            print("tried jsondecoding")
+                            self.model = try JSONDecoder().decode(GameModel.self, from: data)
+                        } catch {
+                            print("creating blank gamemodel since decoding failed")
+                            noMatchData = true
+                        }
+                    } else {
+                        print("creating blank gamemodel since data is nil")
+                        noMatchData = true
+                    }
+
+                    if (noMatchData) {
+                        // need to start a new Match
+                        self.model = GameModel()
+
+
+
+                    }
+                    // make sure we are added to the game (no harm if already added)
+                    self.model.addPlayer()
+
+                    GameCenterHelper.helper.currentMatch = match
+
+                    if ( self.model.localPlayerUIColor() == .white) {
+                        print("Local Player is White")
+                    } else {
+
+                        print("Local Player is BLACK")
+
+                    }
+
+                    self.updateFromModel()
+
+                    self.view.setNeedsDisplay()
+
+
+        } // loadMatchData
+
+        }// self.viewisloaded
+    }
+
+
     
     func displayInfo(piece: ChessPiece) -> String{
         //print("Displaying info on check label from piece: \(piece)")
