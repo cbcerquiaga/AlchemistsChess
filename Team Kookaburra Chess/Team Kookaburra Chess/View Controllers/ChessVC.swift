@@ -582,7 +582,7 @@ extension ChessVC: BoardCellDelegate {
             }
         }
         possibleMoves = chessBoard.getPossibleMoves(forPiece: cell.piece)
-        if cell.piece.color == playerColor {
+        if (!isLocalMatch && cell.piece.color == playerColor) || (isLocalMatch && cell.piece.color == playerTurn) {
             highlightPossibleMoves()
             cell.backgroundColor = cell.hexStringToUIColor(hex:"6DAFFB")
         } else {
@@ -829,7 +829,7 @@ extension ChessVC: ChessBoardDelegate {
     
     func displayInfo(piece: ChessPiece) -> String{
         //print("Displaying info on check label from piece: \(piece)")
-        if piece.color == playerTurn{
+        if (!isLocalMatch && piece.color == playerColor) || (isLocalMatch && piece.color == playerTurn){
             switch piece.type{
             case .dummy:
                 return "An empty space"
