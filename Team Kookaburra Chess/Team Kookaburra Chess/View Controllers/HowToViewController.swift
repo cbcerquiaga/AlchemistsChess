@@ -22,7 +22,7 @@ class HowToViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.textView.setContentOffset(CGPoint.zero, animated: false)
+        //self.textView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     func loadScrollView(){

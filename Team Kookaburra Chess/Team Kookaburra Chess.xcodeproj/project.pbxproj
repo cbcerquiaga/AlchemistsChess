@@ -160,7 +160,6 @@
 		646A3EA72263E48700378BEB /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646A3EA62263E48700378BEB /* GameModel.swift */; };
 		647897CA227A8835003A2C2E /* OnlineGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647897C9227A8835003A2C2E /* OnlineGameScene.swift */; };
 		88198249224E69D6008E8EFD /* cathedral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88198248224E69D6008E8EFD /* cathedral.jpg */; };
-		8819824B224E7948008E8EFD /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819824A224E7948008E8EFD /* MyFriendsViewController.swift */; };
 		8819824D224E7BBA008E8EFD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819824C224E7BBA008E8EFD /* StoreViewController.swift */; };
 		8819824F224E7CAF008E8EFD /* MyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819824E224E7CAF008E8EFD /* MyStatsViewController.swift */; };
 		88198251224E7D12008E8EFD /* PlayBtOpeningScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88198250224E7D12008E8EFD /* PlayBtOpeningScreenViewController.swift */; };
@@ -352,7 +351,6 @@
 		646A3EA62263E48700378BEB /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		647897C9227A8835003A2C2E /* OnlineGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineGameScene.swift; sourceTree = "<group>"; };
 		88198248224E69D6008E8EFD /* cathedral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cathedral.jpg; sourceTree = "<group>"; };
-		8819824A224E7948008E8EFD /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		8819824C224E7BBA008E8EFD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		8819824E224E7CAF008E8EFD /* MyStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatsViewController.swift; sourceTree = "<group>"; };
 		88198250224E7D12008E8EFD /* PlayBtOpeningScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayBtOpeningScreenViewController.swift; sourceTree = "<group>"; };
@@ -648,7 +646,6 @@
 				88198250224E7D12008E8EFD /* PlayBtOpeningScreenViewController.swift */,
 				8819824E224E7CAF008E8EFD /* MyStatsViewController.swift */,
 				8819824C224E7BBA008E8EFD /* StoreViewController.swift */,
-				8819824A224E7948008E8EFD /* MyFriendsViewController.swift */,
 				889C82632241651D00B77A21 /* OpeningScreen.swift */,
 				88E34F3822502A2D007ED2F5 /* HowToViewController.swift */,
 				88E34F3A2250304E007ED2F5 /* PlacePiecesViewController.swift */,
@@ -949,7 +946,6 @@
 				253D9F2122CF919200A45DB4 /* AboutViewController.swift in Sources */,
 				25147074226FC0B10042F548 /* BuyGoldViewController.swift in Sources */,
 				88E34F3F2250341C007ED2F5 /* YourFriendsViewController.swift in Sources */,
-				8819824B224E7948008E8EFD /* MyFriendsViewController.swift in Sources */,
 				253D9F2522CF91B000A45DB4 /* CreditsViewController.swift in Sources */,
 				251D1F92224074A800AD7CE4 /* ChessBoard.swift in Sources */,
 				253D9F1D22CF917000A45DB4 /* EaringGoldViewController.swift in Sources */,
