@@ -274,6 +274,24 @@ struct GameModel: Codable{
 
     }
 
+    func assignGold(){
+        if ((localPlayerUIColor() == .black) && (winner == .black)) || ((localPlayerUIColor() == .white) && (winner == .white)){
+            giveGoldToPlayer(player: winner!, gold: 100)
+        }
+        if !forfeited{
+            var loser: PlayerColor = .white
+            if winner == .white{
+                loser = .black
+            }
+            giveGoldToPlayer(player: loser, gold: 40)
+        }
+    }
+
+    func giveGoldToPlayer(player: PlayerColor, gold: Int){
+        //if the player color is the local player color, give them the gold
+        //if the player color is the remote player color, give them the gold instead
+    }
+
     func isGameOver() -> Bool {
 
        return (nil != winner || forfeited || tied )

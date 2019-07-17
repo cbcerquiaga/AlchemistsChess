@@ -275,7 +275,7 @@ class ChessVC: UIViewController {
         self.resetFormationFromModel()
     }
     
-    func fofeit(){
+    func forfeit(){
         if playerColor == .white{
             gameOver(withWinner: .black)
         } else {
@@ -420,7 +420,7 @@ class ChessVC: UIViewController {
     func presentForfeit() {
         let ac = UIAlertController(title: "Forfeit", message: "Are you sure you want to forfeit the game?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Forfeit", style: .default, handler: { action in
-            self.fofeit()
+            self.forfeit()
         })
         let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
@@ -461,9 +461,12 @@ extension ChessVC: BoardCellDelegate {
         if !chessBoard.canPlayerTakeTurn(color: playerColor){
             if playerColor == .white{
                 gameOver(withWinner: .black, message: "You blocked yourself in and couldn't move")
+                model.winner = .black
             } else { //if playerColor == .black
                 gameOver(withWinner: .white, message: "You blocked yourself in and couldn't move")
+                model.winner = .white
             }
+
         }
         //chessBoard.board[row][col].showPieceInfo()
         // Check if making a move (if had selected piece before)
