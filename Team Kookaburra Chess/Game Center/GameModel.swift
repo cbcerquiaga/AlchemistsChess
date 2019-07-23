@@ -288,8 +288,12 @@ struct GameModel: Codable{
     }
 
     func giveGoldToPlayer(player: PlayerColor, gold: Int){
-        //if the player color is the local player color, give them the gold
-        //if the player color is the remote player color, give them the gold instead
+        if (player == .white && localPlayerUIColor() == .white) || (player == .black && localPlayerUIColor() == .black){
+            //give player gold
+            var playerGold = UserDefaults.standard.integer(forKey: "playerGold")
+            playerGold = playerGold + gold
+            UserDefaults.standard.set(gold, forKey: "playerGold")
+        }
     }
 
     func isGameOver() -> Bool {

@@ -738,6 +738,7 @@ extension ChessVC: ChessBoardDelegate {
             presentLocalGameOver(message: message)
         } else {
             presentOnlineGameOver(message: message)
+            model.assignGold()
         }
     }
     
