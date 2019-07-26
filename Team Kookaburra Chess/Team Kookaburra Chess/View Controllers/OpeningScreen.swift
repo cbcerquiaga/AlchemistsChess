@@ -51,6 +51,21 @@ class OpeningScreen: UIViewController {
             let pieceArray = ["Archer", "Ballista", "Basilisk", "Battering Ram", "Bishop", "Bombard", "Camel", "Centaur", "Demon", "Dragon Rider", "Dwarf", "Elephant", "Fire Dragon", "Footsoldier", "Gargoyle", "Ghost Queen", "Goblin", "Griffin", "Ice Dragon", "Knight", "Left Handed Elf Warrior", "Mage", "Man at Arms", "Manticore", "Minotaur", "Monk", "Monopod", "Ogre", "Orc Warrior", "Pawn", "Pikeman", "Queen", "Right Handed Elf Warrior", "Rook", "Royal Guard", "Scout", "Ship", "Superking", "Swordsman", "Trebuchet", "Unicorn"]
             UserDefaults.standard.set(pieceArray, forKey: "ownedPieces")
         }
+        let lastLogin = UserDefaults.standard.string(forKey: "lastLogin")
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        let formattedDate = format.string(from: date)
+        if lastLogin != formattedDate{
+            print("new daily log in")
+            var gold = UserDefaults.standard.integer(forKey: "playerGold")
+            print("before bonus: \(gold)")
+            gold = gold + 10
+            UserDefaults.standard.set(gold, forKey: "playerGold")
+            UserDefaults.standard.set(formattedDate, forKey: "lastLogin")
+        } else {
+            print("You've already logged in today")
+        }
         super.viewDidLoad()
         UserDefaults.standard.synchronize()
         demotionImage.image = UIImage(named: "demotionSymbol.png")
@@ -64,6 +79,9 @@ class OpeningScreen: UIViewController {
             promotionPopup()
             if rank == 3{
                 //gold + 1000
+                var gold = UserDefaults.standard.integer(forKey: "playerGold")
+                gold = gold + 1000
+                UserDefaults.standard.set(gold, forKey: "playerGold")
             } else {
                 var rank = UserDefaults.standard.integer(forKey: "playerRank")
                 rank = rank + 1
