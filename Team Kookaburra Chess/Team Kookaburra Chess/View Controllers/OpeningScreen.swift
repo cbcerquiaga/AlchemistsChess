@@ -51,21 +51,8 @@ class OpeningScreen: UIViewController {
             let pieceArray = ["Archer", "Ballista", "Basilisk", "Battering Ram", "Bishop", "Bombard", "Camel", "Centaur", "Demon", "Dragon Rider", "Dwarf", "Elephant", "Fire Dragon", "Footsoldier", "Gargoyle", "Ghost Queen", "Goblin", "Griffin", "Ice Dragon", "Knight", "Left Handed Elf Warrior", "Mage", "Man at Arms", "Manticore", "Minotaur", "Monk", "Monopod", "Ogre", "Orc Warrior", "Pawn", "Pikeman", "Queen", "Right Handed Elf Warrior", "Rook", "Royal Guard", "Scout", "Ship", "Superking", "Swordsman", "Trebuchet", "Unicorn"]
             UserDefaults.standard.set(pieceArray, forKey: "ownedPieces")
         }
-        let lastLogin = UserDefaults.standard.string(forKey: "lastLogin")
-        let date = Date()
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
-        let formattedDate = format.string(from: date)
-        if lastLogin != formattedDate{
-            print("new daily log in")
-            var gold = UserDefaults.standard.integer(forKey: "playerGold")
-            print("before bonus: \(gold)")
-            gold = gold + 10
-            UserDefaults.standard.set(gold, forKey: "playerGold")
-            UserDefaults.standard.set(formattedDate, forKey: "lastLogin")
-        } else {
-            print("You've already logged in today")
-        }
+        dailyLoginCheck()
+        //dailyLoginPopup()//Debug purposes only
         super.viewDidLoad()
         UserDefaults.standard.synchronize()
         demotionImage.image = UIImage(named: "demotionSymbol.png")
@@ -130,6 +117,33 @@ class OpeningScreen: UIViewController {
         GameCenterHelper.helper.viewController = self
         didMove()
     }
+
+    func dailyLoginCheck(){
+        let lastLogin = UserDefaults.standard.string(forKey: "lastLogin")
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        let formattedDate = format.string(from: date)
+        print("\(formattedDate)")
+        if lastLogin != formattedDate{
+            print("new daily log in")
+            var gold = UserDefaults.standard.integer(forKey: "playerGold")
+            print("before bonus: \(gold)")
+            gold = gold + 36 //1/7 of the cost of an OK piece
+            UserDefaults.standard.set(gold, forKey: "playerGold")
+            UserDefaults.standard.set(formattedDate, forKey: "lastLogin")
+            dailyLoginPopup()
+        } else {
+            print("You've already logged in today")
+        }
+    }
+
+    func dailyLoginPopup(){
+        let image = UIImage(named: "silverPromotionBanner.png")
+        imageView.image = image
+        view.addSubview(imageView)
+        closeBannerTimer()
+    }
     
     func promotionPopup(){
         let rank = UserDefaults.standard.integer(forKey: "playerRank")
@@ -190,7 +204,7 @@ class OpeningScreen: UIViewController {
     }
     
     @objc func hideBanner(){
-        print("you don't have to go home but you can't stay here")
+        //print("you don't have to go home but you can't stay here")
         //currentAlert.dismiss(animated: true, completion: nil)
         imageView.image = nil
         bannerTimer.invalidate()
