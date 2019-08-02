@@ -482,193 +482,90 @@
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cgo
+Cg
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Getting Started">
+                                    <fragment content="Playing Matches">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-Alchemist’s Chess is not the chess you’re used to playing. Memorizing starting moves won’t help you here. You’ll need to collect pieces and come up with your own strategies to be the best. Before you jump into a match, you should understand how the game works.
-When you start a match, you’ll be given the option to place your pieces. You can only place pieces you’ve bought in the store, so you’ll need to play to unlock them all and find your ideal strategy. Different pieces cost a different amount to place on the board, and you get up to 450 points to choose all of your pieces. Once you start, your objective is to capture your opponent’s king or kings before they can capture yours.
+The most frequent way you can earn more gold is by playing matches online. If you play and win, you’ll get lots of gold, but even if you lose you’ll get a decent amount of gold. Local matches don’t get you any gold.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="The Store">
+                                    <fragment content="Daily Login Bonus">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-In the store, you can not only buy the pieces you want, but you can sell the pieces you don’t want so you can try new pieces or streamline your piece placement process. Selling a piece gives you back all of the gold it costs to buy it, so you can re-purchase it later if you want or put that gold to a different piece. You can get enough gold to unlock every piece quickly by playing and winning matches, but if you’re impatient you can pay money to get more gold with real money.
+Every day that you log in, you’ll get 36 gold. After a week, that’s enough gold to get a mid-tier piece. After a little over two weeks, that’s enough to get a top-tier piece.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Gameplay">
+                                    <fragment content="Winning a Championship">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-Tap any piece on the board to highlight it. If the piece is yours and it’s your turn, its possible moves will be highlighted in blue. If you own the piece but it’s not your turn, its moves will be highlighted in yellow. If the piece belongs to your opponent, its moves will be highlighted in red. Certain moves that exist in normal chess do not exist in Alchemist’s chess- notably castling and the en passant capture. If you manage to get certain types of pieces across the board to your enemy’s side, you can promote them to more powerful pieces. The promotable pieces are the Pawn, Goblin, Gargoyle, Footsoldier, Monk, and Dwarf. The game ends when you or your opponent run out of kings, or if one or both of the players can't make any more moves.
+As you play and win, you’ll rank up. If you rank into Diamond tier and keep winning, you’ll win a championship. Championships get you 1000 gold and put you back into the middle of Diamond tier.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Local Match">
+                                    <fragment content="Buying Gold">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-In a local match, you’ll be able to play with someone else by sharing your phone and passing it back and forth. You’ll have access to all of the pieces that you’ve unlocked. Unlike online matches, you won’t get any gold for playing locally.
-
+If you absolutely positively cannot wait, you can buy gold for real-world money. We’ve tried to be as respectful as possible of your money while at the same time not making the game pay to win in any fashion. If you do decide to buy gold, your support for the game and its developers is greatly appreciated.
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Online Match">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-When you choose to play online, you have the choice to play a random opponent, to challenge a friend, or to continue any previously started match. You get more XP for your rank when you play random opponents than you do when you play your friends.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Rankings and Matchmaking
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">As you play online, you will get ranking points that go towards your rank. In order, the ranks are: Bronze, Silver, Gold, and Diamond. Winning matches gets you ranking points and losing them makes you lose ranking points. Beating players who are your level or higher get you more ranking points and losing to better players has less of a penalty. If you get 15 ranking points in every level but Diamond, you’ll rank up. Diamond players get 1000 gold when they get 15 ranking points. For every level but bronze, reaching -10 ranking points will rank you down. Bronze players can’t get below 0 points.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Placement Rules">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-There will be prompts on the screen, but there are 3 rules that you need to follow for your pieces to be legally placed. First, you must have at least one king on the board. You can also not place any pieces in the front row unless the middle row is entirely full. The final rule is that Dragon Riders can’t be placed in any row except the back row. If you break any of the rules, don’t worry- the game will warn you and tell you what you did wrong.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Credits">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-Concept- Blake Erquiaga
-Art- Blake Erquiaga
-Development- Blake Erquiaga, Anthony Santangelo, Meghan Stovall
-
-Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as well as to all of our testers.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
@@ -965,194 +862,75 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Getting Started">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
                                         <string key="content">
-Alchemist’s Chess is not the chess you’re used to playing. Memorizing starting moves won’t help you here. You’ll need to collect pieces and come up with your own strategies to be the best. Before you jump into a match, you should understand how the game works.
-When you start a match, you’ll be given the option to place your pieces. You can only place pieces you’ve bought in the store, so you’ll need to play to unlock them all and find your ideal strategy. Different pieces cost a different amount to place on the board, and you get up to 450 points to choose all of your pieces. Once you start, your objective is to capture your opponent’s king or kings before they can capture yours.
+While there are some obvious changes to original chess, there are some that are more subtle that only experienced chess players might notice.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="The Store">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-In the store, you can not only buy the pieces you want, but you can sell the pieces you don’t want so you can try new pieces or streamline your piece placement process. Selling a piece gives you back all of the gold it costs to buy it, so you can re-purchase it later if you want or put that gold to a different piece. You can get enough gold to unlock every piece quickly by playing and winning matches, but if you’re impatient you can pay money to get more gold with real money.
-
+                                        <string key="content">Kings
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Gameplay">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-Tap any piece on the board to highlight it. If the piece is yours and it’s your turn, its possible moves will be highlighted in blue. If you own the piece but it’s not your turn, its moves will be highlighted in yellow. If the piece belongs to your opponent, its moves will be highlighted in red. Certain moves that exist in normal chess do not exist in Alchemist’s chess- notably castling and the en passant capture. If you manage to get certain types of pieces across the board to your enemy’s side, you can promote them to more powerful pieces. The promotable pieces are the Pawn, Goblin, Gargoyle, Footsoldier, Monk, and Dwarf. The game ends when you or your opponent run out of kings, or if one or both of the players can't make any more moves.
+                                        <string key="content">Players can place multiple kings on the board at once. This changes several aspects about the game. In traditional chess, the game ends when a player’s king is in checkmate. However, in Alchemist’s Chess, a player needs to capture every king on the board to secure a win. Even when there is only one king or superking left, checkmate still will not end the match.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Local Match">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-In a local match, you’ll be able to play with someone else by sharing your phone and passing it back and forth. You’ll have access to all of the pieces that you’ve unlocked. Unlike online matches, you won’t get any gold for playing locally.
-
+                                        <string key="content">Promotions
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Online Match">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-When you choose to play online, you have the choice to play a random opponent, to challenge a friend, or to continue any previously started match. You get more XP for your rank when you play random opponents than you do when you play your friends.
+                                        <string key="content">In traditional chess, the only piece that can be promoted is the pawn. In Alchemist’s Chess, the pawn, monk, goblin, gargoyle, footsoldier, and dwarf can all be promoted when they reach the opposite side of the board. When a piece can be promoted, it has the option to become a queen, bombard, unicorn, griffin, or dragon rider. The unicorn is a better piece than the queen, but in case you forget what the pieces do, people who are familiar with regular chess will at least remember what the queen does.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Rankings and Matchmaking
+                                        <string key="content">Removed Moves
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">As you play online, you will get ranking points that go towards your rank. In order, the ranks are: Bronze, Silver, Gold, and Diamond. Winning matches gets you ranking points and losing them makes you lose ranking points. Beating players who are your level or higher get you more ranking points and losing to better players has less of a penalty. If you get 15 ranking points in every level but Diamond, you’ll rank up. Diamond players get 1000 gold when they get 15 ranking points. For every level but bronze, reaching -10 ranking points will rank you down. Bronze players can’t get below 0 points.
-
+                                        <string key="content">Castling and the En Passant capture have been removed from regular chess for Alchemist’s Chess. The en passant capture was removed because it couldn’t be balanced with the variety of other pieces that exist in the game. The castle can be replicated by arranging your pieces in a castle to start the match.
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Placement Rules">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-There will be prompts on the screen, but there are 3 rules that you need to follow for your pieces to be legally placed. First, you must have at least one king on the board. You can also not place any pieces in the front row unless the middle row is entirely full. The final rule is that Dragon Riders can’t be placed in any row except the back row. If you break any of the rules, don’t worry- the game will warn you and tell you what you did wrong.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Credits">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-Concept- Blake Erquiaga
-Art- Blake Erquiaga
-Development- Blake Erquiaga, Anthony Santangelo, Meghan Stovall
-
-Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as well as to all of our testers.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
@@ -2629,7 +2407,7 @@ Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as w
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V50-pd-tHg">
-                                <rect key="frame" x="20" y="134" width="374" height="755"/>
+                                <rect key="frame" x="20" y="134" width="374" height="728"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
@@ -3247,9 +3025,9 @@ If you find the whole “strategy” thing to be tiresome, then you can simply u
         <segue reference="ynr-Ld-Yg9"/>
         <segue reference="N8g-z2-68R"/>
         <segue reference="gjB-tX-g2I"/>
-        <segue reference="HNy-II-BFc"/>
+        <segue reference="cwv-4H-uxg"/>
         <segue reference="hdb-KR-fb8"/>
-        <segue reference="nmh-DH-jYy"/>
+        <segue reference="F9W-Gw-VgN"/>
         <segue reference="hUd-9o-Etp"/>
         <segue reference="jpc-O9-TBa"/>
     </inferredMetricsTieBreakers>
