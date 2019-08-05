@@ -139,7 +139,7 @@ class OpeningScreen: UIViewController {
     }
 
     func dailyLoginPopup(){
-        let image = UIImage(named: "silverPromotionBanner.png")
+        let image = UIImage(named: "dailyLoginBanner.png")
         imageView.image = image
         view.addSubview(imageView)
         closeBannerTimer()

@@ -33,6 +33,7 @@
 		252FB3192288C47D0051A134 /* blackBoar.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB3182288C47D0051A134 /* blackBoar.png */; };
 		252FB31B228A4DFD0051A134 /* whiteThunderChariot.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */; };
 		252FB31D228A4E050051A134 /* blackThunderChariot.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB31C228A4E040051A134 /* blackThunderChariot.png */; };
+		25362FA622F8781100A4D5B9 /* dailyLoginBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FA522F8781100A4D5B9 /* dailyLoginBanner.png */; };
 		253D9F0A22CF899500A45DB4 /* RWGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0922CF899500A45DB4 /* RWGameData.swift */; };
 		253D9F0D22CF90A700A45DB4 /* BasicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */; };
 		253D9F0F22CF90BE00A45DB4 /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */; };
@@ -224,6 +225,7 @@
 		252FB3182288C47D0051A134 /* blackBoar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackBoar.png; sourceTree = "<group>"; };
 		252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteThunderChariot.png; sourceTree = "<group>"; };
 		252FB31C228A4E040051A134 /* blackThunderChariot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackThunderChariot.png; sourceTree = "<group>"; };
+		25362FA522F8781100A4D5B9 /* dailyLoginBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dailyLoginBanner.png; sourceTree = "<group>"; };
 		253D9F0922CF899500A45DB4 /* RWGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWGameData.swift; sourceTree = "<group>"; };
 		253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
 		253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				25FFCD5F2256D3FD00C81196 /* loadingIcon.png */,
 				25FFCD6B2256E54000C81196 /* alchemistIconSettings.png */,
 				25FFCD672256DF6F00C81196 /* loadingText.png */,
+				25362FA522F8781100A4D5B9 /* dailyLoginBanner.png */,
 				258FEEE4225290E7007ED10C /* promotionSymbol.png */,
 				258FEEE2225290E0007ED10C /* demotionSymbol.png */,
 				258FEEE6225290F7007ED10C /* championTrophy.png */,
@@ -892,6 +895,7 @@
 				25B5F5F122501AC700DF89FE /* whiteFootsoldier.png in Resources */,
 				251D1F5C22403DAD00AD7CE4 /* Actions.sks in Resources */,
 				25B5F5DC22501AC700DF89FE /* whiteDragonRider.png in Resources */,
+				25362FA622F8781100A4D5B9 /* dailyLoginBanner.png in Resources */,
 				259FEDA6224949DE006BE3E8 /* blackBallista.png in Resources */,
 				25B5F5D822501AC700DF89FE /* whiteFireDragon.png in Resources */,
 				25415E33224A981500B7E13E /* blackDragonRider.png in Resources */,
