@@ -358,6 +358,10 @@ class ChessBoard {
             return piece.isMovementAppropriate(toIndex: move)
         case .thunderChariot:
             return piece.isMovementAppropriate(toIndex: move)
+        case .doppel:
+            return piece.isMovementAppropriate(toIndex: move)
+        case .scholar:
+            return piece.isMovementAppropriate(toIndex: move)
         }
     }
     
@@ -601,6 +605,10 @@ class ChessBoard {
             return isMoveValid(forRookOrBishopOrQueen: piece, toIndex: dest)
         case .thunderChariot:
             return isMoveValid(forChariot: piece, toIndex: dest)
+        case .doppel:
+            return isMoveValid(forRookOrBishopOrQueen: piece, toIndex: dest)
+        case .scholar:
+            return isMoveValid(forRookOrBishopOrQueen: piece, toIndex: dest)
         }
         return true
     }

@@ -23,7 +23,7 @@ class StoreViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var getMoreGoldButton: UIButton!
     var gold: Int = 0
     var pickerString = ""
-    let pickerData =  ["Archer", "Ballista", "Basilisk", "Battering Ram", "Bishop", "Boar", "Bombard", "Camel", "Centaur", "Demon", "Dragon Rider", "Dwarf", "Elephant", "Fire Dragon", "Footsoldier", "Gargoyle", "Ghost Queen", "Goblin", "Griffin", "Ice Dragon", "Knight", "Left Handed Elf Warrior", "Mage", "Man at Arms", "Manticore", "Minotaur", "Monk", "Monopod", "Ogre", "Orc Warrior", "Pawn", "Pikeman", "Queen", "Right Handed Elf Warrior", "Rook", "Royal Guard", "Scout", "Ship", "Superking", "Swordsman", "Thunder Chariot", "Trebuchet", "Unicorn"]
+    let pickerData =  ["Archer", "Ballista", "Basilisk", "Battering Ram", "Bishop", "Boar", "Bombard", "Camel", "Centaur", "Demon", "Doppelsoldner", "Dragon Rider", "Dwarf", "Elephant", "Fire Dragon", "Footsoldier", "Gargoyle", "Ghost Queen", "Goblin", "Griffin", "Ice Dragon", "Knight", "Left Handed Elf Warrior", "Mage", "Man at Arms", "Manticore", "Minotaur", "Monk", "Monopod", "Ogre", "Orc Warrior", "Pawn", "Pikeman", "Queen", "Right Handed Elf Warrior", "Rook", "Royal Guard", "Scholar", "Scout", "Ship", "Superking", "Swordsman", "Thunder Chariot", "Trebuchet", "Unicorn"]
     var owned: [String] = [String]()
     
     override func viewDidLoad(){
@@ -103,7 +103,7 @@ class StoreViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let piece = getPiece(string: pickerString)
         if piece.type == .pawn || piece.type == .dwarf || piece.type == .goblin || piece.type == .monk || piece.type == .footSoldier || piece.type == .gargoyle{
             return 100
-        } else if piece.type == .ogre || piece.type == .orcWarrior || piece.type == .elephant || piece.type == .manAtArms || piece.type == .swordsman || piece.type == .pikeman || piece.type == .archer || piece.type == .royalGuard || piece.type == .scout || piece.type == .demon{
+        } else if piece.type == .ogre || piece.type == .orcWarrior || piece.type == .elephant || piece.type == .manAtArms || piece.type == .swordsman || piece.type == .pikeman || piece.type == .archer || piece.type == .royalGuard || piece.type == .scout || piece.type == .demon || piece.type == .scholar || piece.type == .doppel{
             return 150
         } else if piece.type == .rook || piece.type == .bishop || piece.type == .knight || piece.type == .basilisk || piece.type == .minotaur || piece.type == .fireDragon || piece.type == .iceDragon || piece.type == .monopod || piece.type == .batteringRam || piece.type == .ballista || piece.type == .trebuchet || piece.type == .ghostQueen || piece.type == .leftElf || piece.type == .rightElf || piece.type == .camel || piece.type == .ship || piece.type == .boar || piece.type == .thunderChariot{
             return 250
@@ -169,6 +169,8 @@ class StoreViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             piece.type = .centaur
         case "Demon":
             piece.type = .demon
+        case "Doppelsoldner":
+            piece.type = .doppel
         case "Dragon Rider":
             piece.type = .dragonRider
         case "Dwarf":
@@ -221,6 +223,8 @@ class StoreViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             piece.type = .rook
         case "Royal Guard":
             piece.type = .royalGuard
+        case "Scholar":
+            piece.type = .scholar
         case "Scout":
             piece.type = .scout
         case "Ship":
@@ -337,6 +341,10 @@ class StoreViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             string = "Moves like a queen, but can only travel 2 spaces."
         case .thunderChariot:
             string = "Moves like a rook, but zig-zags around the board. It always zig-zags right, then left no matter which direction it moves."
+        case .doppel:
+            string = "Moves like a rook, but only two spaces."
+        case .scholar:
+            string = "Moves like a bishop, but only two spaces."
         default:
             string = ""
         }

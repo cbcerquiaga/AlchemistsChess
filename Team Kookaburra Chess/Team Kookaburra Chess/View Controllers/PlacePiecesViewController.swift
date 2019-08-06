@@ -931,6 +931,8 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             piece.type = .centaur
         case "Demon":
             piece.type = .demon
+        case "Doppelsoldner":
+            piece.type = .doppel
         case "Dragon Rider":
             piece.type = .dragonRider
         case "Dwarf":
@@ -983,6 +985,8 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             piece.type = .rook
         case "Royal Guard":
             piece.type = .royalGuard
+        case "Scholar":
+            piece.type = .scholar
         case "Scout":
             piece.type = .scout
         case "Ship":
@@ -1098,6 +1102,10 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             string = "Moves like a queen, but can only travel 2 spaces."
         case .thunderChariot:
             string = "Moves like a rook, but zig-zags around the board. It always zig-zags right, then left no matter which direction it moves."
+        case .doppel:
+            string = "Moves like a rook, but only two spaces."
+        case .scholar:
+            string = "Moves like a bishop, but only two spaces."
         default:
             string = ""
         }
@@ -1255,6 +1263,10 @@ class PlacePiecesViewController: UIViewController, UIPickerViewDelegate, UIPicke
             return "Goblin"
         case .footSoldier:
             return "Footsoldier"
+        case .doppel:
+            return "Doppelsoldner"
+        case .scholar:
+            return "Scholar"
         }
     }
 }

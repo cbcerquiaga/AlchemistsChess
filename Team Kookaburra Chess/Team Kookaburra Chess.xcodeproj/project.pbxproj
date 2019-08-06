@@ -34,6 +34,13 @@
 		252FB31B228A4DFD0051A134 /* whiteThunderChariot.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */; };
 		252FB31D228A4E050051A134 /* blackThunderChariot.png in Resources */ = {isa = PBXBuildFile; fileRef = 252FB31C228A4E040051A134 /* blackThunderChariot.png */; };
 		25362FA622F8781100A4D5B9 /* dailyLoginBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FA522F8781100A4D5B9 /* dailyLoginBanner.png */; };
+		25362FA822F8B3B300A4D5B9 /* fadedBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FA722F8B3B300A4D5B9 /* fadedBackground.png */; };
+		25362FAA22F8B3CB00A4D5B9 /* backgroundGreyScale.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FA922F8B3CA00A4D5B9 /* backgroundGreyScale.png */; };
+		25362FAC22F909CC00A4D5B9 /* blackDoppelsoldner.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FAB22F909CC00A4D5B9 /* blackDoppelsoldner.png */; };
+		25362FAE22F909D800A4D5B9 /* blackScholar.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FAD22F909D700A4D5B9 /* blackScholar.png */; };
+		25362FB022F909E400A4D5B9 /* whiteDoppelsoldner.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FAF22F909E400A4D5B9 /* whiteDoppelsoldner.png */; };
+		25362FB222F909F900A4D5B9 /* whiteScholar.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FB122F909F900A4D5B9 /* whiteScholar.png */; };
+		25362FB422F9107400A4D5B9 /* allPieces.png in Resources */ = {isa = PBXBuildFile; fileRef = 25362FB322F9107400A4D5B9 /* allPieces.png */; };
 		253D9F0A22CF899500A45DB4 /* RWGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0922CF899500A45DB4 /* RWGameData.swift */; };
 		253D9F0D22CF90A700A45DB4 /* BasicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */; };
 		253D9F0F22CF90BE00A45DB4 /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */; };
@@ -226,6 +233,13 @@
 		252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteThunderChariot.png; sourceTree = "<group>"; };
 		252FB31C228A4E040051A134 /* blackThunderChariot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackThunderChariot.png; sourceTree = "<group>"; };
 		25362FA522F8781100A4D5B9 /* dailyLoginBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dailyLoginBanner.png; sourceTree = "<group>"; };
+		25362FA722F8B3B300A4D5B9 /* fadedBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fadedBackground.png; sourceTree = "<group>"; };
+		25362FA922F8B3CA00A4D5B9 /* backgroundGreyScale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundGreyScale.png; sourceTree = "<group>"; };
+		25362FAB22F909CC00A4D5B9 /* blackDoppelsoldner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackDoppelsoldner.png; sourceTree = "<group>"; };
+		25362FAD22F909D700A4D5B9 /* blackScholar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackScholar.png; sourceTree = "<group>"; };
+		25362FAF22F909E400A4D5B9 /* whiteDoppelsoldner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteDoppelsoldner.png; sourceTree = "<group>"; };
+		25362FB122F909F900A4D5B9 /* whiteScholar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteScholar.png; sourceTree = "<group>"; };
+		25362FB322F9107400A4D5B9 /* allPieces.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allPieces.png; sourceTree = "<group>"; };
 		253D9F0922CF899500A45DB4 /* RWGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWGameData.swift; sourceTree = "<group>"; };
 		253D9F0C22CF90A700A45DB4 /* BasicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
 		253D9F0E22CF90BE00A45DB4 /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
@@ -452,6 +466,13 @@
 		251D202B22431F2C00AD7CE4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				25362FB322F9107400A4D5B9 /* allPieces.png */,
+				25362FAB22F909CC00A4D5B9 /* blackDoppelsoldner.png */,
+				25362FAD22F909D700A4D5B9 /* blackScholar.png */,
+				25362FAF22F909E400A4D5B9 /* whiteDoppelsoldner.png */,
+				25362FB122F909F900A4D5B9 /* whiteScholar.png */,
+				25362FA722F8B3B300A4D5B9 /* fadedBackground.png */,
+				25362FA922F8B3CA00A4D5B9 /* backgroundGreyScale.png */,
 				252FB31A228A4DFD0051A134 /* whiteThunderChariot.png */,
 				252FB31C228A4E040051A134 /* blackThunderChariot.png */,
 				25B249EE2284A1AB0021841B /* AlchemistTitle.png */,
@@ -787,13 +808,16 @@
 				25DEFD492248970A0024A78A /* blackPikeman.png in Resources */,
 				252FB3172288C46B0051A134 /* whiteBoar.png in Resources */,
 				252FB31B228A4DFD0051A134 /* whiteThunderChariot.png in Resources */,
+				25362FAC22F909CC00A4D5B9 /* blackDoppelsoldner.png in Resources */,
 				25B31CF7224E8A61005BAAA8 /* blackFootsoldier.png in Resources */,
 				258FEEE122527B0A007ED10C /* goldDemotionBanner.png in Resources */,
 				258FEED922527B0A007ED10C /* silverPromotionBanner.png in Resources */,
 				25B5F5ED22501AC700DF89FE /* whiteDwarf.png in Resources */,
 				25B5F5EA22501AC700DF89FE /* whiteMinotaur.png in Resources */,
+				25362FB222F909F900A4D5B9 /* whiteScholar.png in Resources */,
 				25B5F5D122501AC700DF89FE /* whiteDemon.png in Resources */,
 				25DEFD45224896EF0024A78A /* blackGuard.png in Resources */,
+				25362FB422F9107400A4D5B9 /* allPieces.png in Resources */,
 				259FEDBA2249E7E5006BE3E8 /* blackCentaur.png in Resources */,
 				25B5F5EF22501AC700DF89FE /* whiteOrcWarrior.png in Resources */,
 				25FFCD6E2256E5BF00C81196 /* alchemistIcon80.png in Resources */,
@@ -808,6 +832,7 @@
 				25B5F5CB22501AC700DF89FE /* whiteBasilisk.png in Resources */,
 				25B5F5F022501AC700DF89FE /* whiteShip.png in Resources */,
 				252A35EC2244150200FE6A09 /* blackPawn.png in Resources */,
+				25362FB022F909E400A4D5B9 /* whiteDoppelsoldner.png in Resources */,
 				25B5F5DE22501AC700DF89FE /* whiteBombard.png in Resources */,
 				258FEEE022527B0A007ED10C /* goldPromotionBanner.png in Resources */,
 				25FFCD642256D6F900C81196 /* Launch Screen.storyboard in Resources */,
@@ -824,6 +849,7 @@
 				252FB31D228A4E050051A134 /* blackThunderChariot.png in Resources */,
 				645068A5224D46E7006709A9 /* testRook.png in Resources */,
 				252FB3192288C47D0051A134 /* blackBoar.png in Resources */,
+				25362FAE22F909D800A4D5B9 /* blackScholar.png in Resources */,
 				254C147B2247E6AA004359CE /* blackDwarf.png in Resources */,
 				258FEEDD22527B0A007ED10C /* rankDiamond.png in Resources */,
 				25B5F5E822501AC700DF89FE /* whiteCentaur.png in Resources */,
@@ -866,6 +892,7 @@
 				88198249224E69D6008E8EFD /* cathedral.jpg in Resources */,
 				25FFCD6C2256E54000C81196 /* alchemistIconSettings.png in Resources */,
 				259FEDAE2249BF65006BE3E8 /* blackRightyElf.png in Resources */,
+				25362FAA22F8B3CB00A4D5B9 /* backgroundGreyScale.png in Resources */,
 				25BC737D224822750083D24E /* blackOrcWarrior.png in Resources */,
 				25BC7377224822600083D24E /* blackElephant.png in Resources */,
 				25B5F5D922501AC700DF89FE /* whiteBatteringRam.png in Resources */,
@@ -896,6 +923,7 @@
 				251D1F5C22403DAD00AD7CE4 /* Actions.sks in Resources */,
 				25B5F5DC22501AC700DF89FE /* whiteDragonRider.png in Resources */,
 				25362FA622F8781100A4D5B9 /* dailyLoginBanner.png in Resources */,
+				25362FA822F8B3B300A4D5B9 /* fadedBackground.png in Resources */,
 				259FEDA6224949DE006BE3E8 /* blackBallista.png in Resources */,
 				25B5F5D822501AC700DF89FE /* whiteFireDragon.png in Resources */,
 				25415E33224A981500B7E13E /* blackDragonRider.png in Resources */,

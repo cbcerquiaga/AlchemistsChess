@@ -53,6 +53,8 @@ enum PieceType: String,Codable {
     case archer
     case royalGuard
     case demon
+    case doppel
+    case scholar
     //tier 1
     case pawn
     case monk
@@ -319,6 +321,12 @@ class ChessPiece {
             case .thunderChariot:
                 symbol = "blackThunderChariot.png"
                 summonCost = 60
+            case .doppel:
+                symbol = "blackDoppelsoldner.png"
+                summonCost = 30
+            case .scholar:
+                symbol = "blackScholar.png"
+                summonCost = 25
             }
         } else if color == .white{
             switch type {
@@ -456,6 +464,12 @@ class ChessPiece {
             case .thunderChariot:
                 symbol = "whiteThunderChariot.png"
                 summonCost = 60
+            case .doppel:
+                symbol = "whiteDoppelsoldner.png"
+                summonCost = 30
+            case .scholar:
+                symbol = "whiteScholar.png"
+                summonCost = 25
             }
         } else {
             symbol = "blankPiece.png"
@@ -566,6 +580,10 @@ class ChessPiece {
             return checkBoar(dest: dest)
         case .thunderChariot:
             return checkChariot(dest: dest)
+        case .doppel:
+            return checkDoppel(dest: dest)
+        case .scholar:
+            return checkScholar(dest: dest)
         }
     }
     
@@ -655,6 +673,26 @@ class ChessPiece {
     func checkRook(dest: BoardIndex) -> Bool {
         if self.row == dest.row || self.col == dest.col {
             return true
+        }
+        return false
+    }
+
+    func checkDoppel(dest: BoardIndex) -> Bool {
+        let validMoves = [(self.row + 2, self.col), (self.row + 1, self.col), (self.row - 2, self.col), (self.row - 1, self.col), (self.row, self.col - 2), (self.row, self.col - 1), (self.row, self.col + 2), (self.row, self.col + 1)]
+        for (validRow, validCol) in validMoves {
+            if dest.row == validRow && dest.col == validCol {
+                return true
+            }
+        }
+        return false
+    }
+
+    func checkScholar(dest: BoardIndex) -> Bool {
+        let validMoves = [(self.row + 2, self.col + 2), (self.row + 1, self.col + 1), (self.row - 2, self.col - 2), (self.row - 1, self.col - 1), (self.row + 2, self.col - 2), (self.row + 1, self.col - 1), (self.row - 2, self.col + 2), (self.row - 1, self.col + 1)]
+        for (validRow, validCol) in validMoves {
+            if dest.row == validRow && dest.col == validCol {
+                return true
+            }
         }
         return false
     }
