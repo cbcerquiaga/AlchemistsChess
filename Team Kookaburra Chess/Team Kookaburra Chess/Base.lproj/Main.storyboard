@@ -43,20 +43,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lhs-az-VDT" userLabel="Level Up Progress">
-                                <rect key="frame" x="201" y="94" width="193" height="1.5"/>
+                                <rect key="frame" x="201" y="93" width="193" height="1.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="TML-8I-9y5"/>
                                 </constraints>
                             </progressView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UAh-pg-cud" userLabel="Level down progress">
-                                <rect key="frame" x="8" y="94" width="193" height="1.5"/>
+                                <rect key="frame" x="8" y="93" width="193" height="1.5"/>
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="XfK-NI-1Y5"/>
                                 </constraints>
                             </progressView>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-cL-FoF">
-                                <rect key="frame" x="0.0" y="305.5" width="414" height="45"/>
+                                <rect key="frame" x="0.0" y="304.5" width="414" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="N7r-px-FlJ"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1VV-nz-4qt" userLabel="demotion image">
-                                <rect key="frame" x="12" y="42" width="33" height="50"/>
+                                <rect key="frame" x="12" y="42" width="33" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="49" id="HfF-b6-UBL"/>
                                     <constraint firstAttribute="height" constant="50" id="Kms-LF-IQ0"/>
@@ -141,7 +141,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LO8-SD-FNp" userLabel="promotion image">
-                                <rect key="frame" x="361" y="43.5" width="33" height="50"/>
+                                <rect key="frame" x="361" y="43.5" width="33" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="qj4-qf-TeI"/>
                                 </constraints>
@@ -621,193 +621,73 @@ If you absolutely positively cannot wait, you can buy gold for real-world money.
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cgo
+Cg
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Getting Started">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-Alchemist’s Chess is not the chess you’re used to playing. Memorizing starting moves won’t help you here. You’ll need to collect pieces and come up with your own strategies to be the best. Before you jump into a match, you should understand how the game works.
-When you start a match, you’ll be given the option to place your pieces. You can only place pieces you’ve bought in the store, so you’ll need to play to unlock them all and find your ideal strategy. Different pieces cost a different amount to place on the board, and you get up to 450 points to choose all of your pieces. Once you start, your objective is to capture your opponent’s king or kings before they can capture yours.
+                                        <string key="content">Principles
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">Unlike regular chess, memorizing starting moves will not do you any good. There are too many pieces, to many starting formations, and too many possibilities for you to simply memorize. That being said, the game is mostly the same and many of the same principles still apply- controlling the center of the board, making purposeful moves, and staying patient are still as important as they are in the classic game. Since there is nothing rushing your moves, be sure to take your time! Check opponents’ possible moves, check your own pieces’ attack patterns, and plan your moves out before actually moving a piece.
 
-</string>
+</mutableString>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="The Store">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-In the store, you can not only buy the pieces you want, but you can sell the pieces you don’t want so you can try new pieces or streamline your piece placement process. Selling a piece gives you back all of the gold it costs to buy it, so you can re-purchase it later if you want or put that gold to a different piece. You can get enough gold to unlock every piece quickly by playing and winning matches, but if you’re impatient you can pay money to get more gold with real money.
+                                        <string key="content">Designing your formation
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">While there is the option to use a random formation, it’s not a very good strategy. It’s much better to carefully design a formation (and save it for later if you like it) based on how you want to play the match. If you want to play a fast, wide open match, then you can use fewer but more powerful pieces to open up the board. If you want a long, procedural match, use lots of cheap pieces to clog up your half of the board or lots of kings. If you’re more comfortable with the traditional chess setup, then you can build from there, substituting pieces as you see fit or even just rearranging it. When choosing your pieces, it’s important to consider what they do. Are they promotable pieces (like the pawn or goblin) that help control the board and funnel your opponent? Leaping pieces (like the knight or camel) that let you bypass opponents’ defenses? Sliding pieces (like the rook or thunderchariot) that let you strike from across the board? It’s extremely important to place pieces where they can move whenever possible or at least have a plan for how to free up blocked pieces.
 
-</string>
+</mutableString>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Gameplay">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-Tap any piece on the board to highlight it. If the piece is yours and it’s your turn, its possible moves will be highlighted in blue. If you own the piece but it’s not your turn, its moves will be highlighted in yellow. If the piece belongs to your opponent, its moves will be highlighted in red. Certain moves that exist in normal chess do not exist in Alchemist’s chess- notably castling and the en passant capture. If you manage to get certain types of pieces across the board to your enemy’s side, you can promote them to more powerful pieces. The promotable pieces are the Pawn, Goblin, Gargoyle, Footsoldier, Monk, and Dwarf. The game ends when you or your opponent run out of kings, or if one or both of the players can't make any more moves.
-
+                                        <string key="content">Endgame
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Local Match">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-In a local match, you’ll be able to play with someone else by sharing your phone and passing it back and forth. You’ll have access to all of the pieces that you’ve unlocked. Unlike online matches, you won’t get any gold for playing locally.
-
-</string>
+                                        <mutableString key="content">Because players can place multiple kings and use superkings, it’s quite difficult to actually corner your opponent into defeat. There is nothing to stop you from making passive moves to try and draw your opponent into making a mistake, especially when they are low on pieces and desperate to stay in the game. By the same token, it’s important to be patient when you’re low on pieces, because even experienced players might have trouble anticipating what you’re going to do, letting you lay a trap and turn the match around.
+</mutableString>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Online Match">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-When you choose to play online, you have the choice to play a random opponent, to challenge a friend, or to continue any previously started match. You get more XP for your rank when you play random opponents than you do when you play your friends.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Rankings and Matchmaking
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">As you play online, you will get ranking points that go towards your rank. In order, the ranks are: Bronze, Silver, Gold, and Diamond. Winning matches gets you ranking points and losing them makes you lose ranking points. Beating players who are your level or higher get you more ranking points and losing to better players has less of a penalty. If you get 15 ranking points in every level but Diamond, you’ll rank up. Diamond players get 1000 gold when they get 15 ranking points. For every level but bronze, reaching -10 ranking points will rank you down. Bronze players can’t get below 0 points.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Placement Rules">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-There will be prompts on the screen, but there are 3 rules that you need to follow for your pieces to be legally placed. First, you must have at least one king on the board. You can also not place any pieces in the front row unless the middle row is entirely full. The final rule is that Dragon Riders can’t be placed in any row except the back row. If you break any of the rules, don’t worry- the game will warn you and tell you what you did wrong.
-
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Credits">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-Concept- Blake Erquiaga
-Art- Blake Erquiaga
-Development- Blake Erquiaga, Anthony Santangelo, Meghan Stovall
-
-Special thanks to Mikael Mukhsikaroyan, Thomas Houpt, and Kathryn Brantley, as well as to all of our testers.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="468" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0">
+                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="504" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
@@ -2905,7 +2785,7 @@ If you find the whole “strategy” thing to be tiresome, then you can simply u
         <segue reference="gjB-tX-g2I"/>
         <segue reference="ssY-rH-rph"/>
         <segue reference="hdb-KR-fb8"/>
-        <segue reference="F9W-Gw-VgN"/>
+        <segue reference="bzx-4l-scR"/>
         <segue reference="hUd-9o-Etp"/>
         <segue reference="jpc-O9-TBa"/>
     </inferredMetricsTieBreakers>
