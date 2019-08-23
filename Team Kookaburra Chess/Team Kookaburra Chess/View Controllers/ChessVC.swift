@@ -484,7 +484,7 @@ extension ChessVC: BoardCellDelegate {
                         
                         
                         // TODO:  call match.canTakeTurnForCurrentMatch instead?
-
+                        //TODO: the bug is here somewhere
                         if (self.model.isLocalPlayerTurn() && chessBoard.canPlayerTakeTurn(color: self.model.localPlayerUIColor())) {
                             
                             chessBoard.move(chessPiece: movingPiece, fromIndex: source, toIndex: dest)
