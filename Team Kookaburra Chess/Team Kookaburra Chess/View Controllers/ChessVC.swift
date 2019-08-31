@@ -35,6 +35,8 @@ class ChessVC: UIViewController {
         label.textColor = .white
         return label
     }()
+
+    var timer = Timer()
     
     let checkLabel: UILabel = {
         let label = UILabel()
@@ -122,8 +124,8 @@ class ChessVC: UIViewController {
         
         // if online match, reset board using self.model
         if (!isLocalMatch) {
-            
-            updateFromModel();
+            checkModelEvery2Seconds()
+            updateFromModel()
             
         } // not a local match
         
@@ -138,6 +140,11 @@ class ChessVC: UIViewController {
         chessBoard.checkGameOver(color: playerTurn)
         //print("White Formation: \(whiteFormation)")
         //print("Black Formation: \(blackFormation)")
+    }
+
+    func checkModelEvery2Seconds(){
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector("updateFromModel"), userInfo: nil, repeats: true)
     }
     
     //probably don't need anymore
