@@ -58,6 +58,7 @@ struct GameModel: Codable{
     var playerColors = [PlayerColor](repeating:.white,count:2)
     
     var playerIDs = [String?]()
+    var playerRanks = [Int?]()//I wanted to make a tuple of IDs and ranks but it wasn't codable...we'll need to just make sure the indexes line up
     
     var messageToDisplay: String {
         return ""
@@ -292,7 +293,28 @@ struct GameModel: Codable{
             //give player gold
             var playerGold = UserDefaults.standard.integer(forKey: "playerGold")
             playerGold = playerGold + gold
-            UserDefaults.standard.set(gold, forKey: "playerGold")
+            UserDefaults.standard.set(playerGold, forKey: "playerGold")
+        }
+    }
+
+    func assignRankingPoints(){
+        if ((localPlayerUIColor() == .black) && (winner == .black)) || ((localPlayerUIColor() == .white) && (winner == .white)){
+            giveRankToPlayer(player: winner!, points: 5)
+        }
+        var loser: PlayerColor = .white
+        if winner == .white{
+            loser = .black
+        }
+            giveRankToPlayer(player: loser, points: -5)
+
+    }
+
+    func giveRankToPlayer(player: PlayerColor, points: Int){
+        if (player == .white && localPlayerUIColor() == .white) || (player == .black && localPlayerUIColor() == .black){
+            //give player points
+            var playerPoints = UserDefaults.standard.integer(forKey: "rankingPoints")
+            playerPoints = playerPoints + points
+            UserDefaults.standard.set(playerPoints, forKey: "rankingPoints")
         }
     }
 

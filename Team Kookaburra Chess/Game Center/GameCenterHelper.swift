@@ -89,7 +89,19 @@ final class GameCenterHelper: NSObject, GKGameCenterControllerDelegate {
         request.minPlayers = 2
         request.maxPlayers = 2
         request.inviteMessage = "Would you like to play Alchemist Chess?"
-        
+        let rank = UserDefaults.standard.integer(forKey: "rank")
+        if winStreak > 5{
+            request.playerGroup = 0//anybody
+        }
+        if rank == 0{//bronze
+            request.playerGroup = 1 | 2//bronze and silver only
+        } else if rank == 1{//silver
+            request.playerGroup = 1|2|3 //bronze, silver, or gold
+        } else if rank == 2{//gold
+            request.playerGroup = 2|3|4 //silver, gold, or diamond
+        } else if rank == 3{//diamond
+            request.playerGroup = 3|4 //only gold and diamond
+        }
         let vc = GKTurnBasedMatchmakerViewController(matchRequest: request)
         vc.turnBasedMatchmakerDelegate = self
         
