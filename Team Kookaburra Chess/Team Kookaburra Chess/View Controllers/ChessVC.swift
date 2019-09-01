@@ -815,6 +815,8 @@ extension ChessVC: ChessBoardDelegate {
                     }
                     // make sure we are added to the game (no harm if already added)
                     self.model.addPlayer()
+                    let rank =  UserDefaults.standard.integer(forKey: "rank")
+                    self.model.playerRanks.append(rank)
 
                     GameCenterHelper.helper.currentMatch = match
 

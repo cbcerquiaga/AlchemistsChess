@@ -298,14 +298,39 @@ struct GameModel: Codable{
     }
 
     func assignRankingPoints(){
-        if ((localPlayerUIColor() == .black) && (winner == .black)) || ((localPlayerUIColor() == .white) && (winner == .white)){
-            giveRankToPlayer(player: winner!, points: 5)
+        let index = playerIDs.firstIndex(of: GKLocalPlayer.local.playerID)!
+        let localRank = playerRanks[index]
+        var oppRank: Int
+        if index == 1{
+            oppRank = playerRanks[0]!
+        } else {
+            oppRank = playerRanks[1]!
+        }
+        if ((localPlayerUIColor() == .black) && (winner == .black)) || ((localPlayerUIColor() == .white) && (winner == .white)){//local player won
+            if localRank! > oppRank{
+                giveRankToPlayer(player: winner!, points: 4)
+            } else if oppRank - localRank! == 2{
+                giveRankToPlayer(player: winner!, points: 7)
+            } else if oppRank - localRank! == 1{
+                giveRankToPlayer(player: winner!, points: 6)
+            } else { //if oppRank == localRank
+                giveRankToPlayer(player: winner!, points: 5)
+            }
         }
         var loser: PlayerColor = .white
         if winner == .white{
             loser = .black
         }
-            giveRankToPlayer(player: loser, points: -5)
+        if (loser == .black && localPlayerUIColor() == .black) || (loser == .white && localPlayerUIColor() == .white){//local player lost
+            if localRank! >= oppRank{
+                giveRankToPlayer(player: loser, points: -5)
+            } else if oppRank - localRank! == 2{
+                giveRankToPlayer(player: loser, points: -2)
+            } else{//} if oppRank - localRank == 1
+                giveRankToPlayer(player: loser, points: -4)
+            }
+        }
+
 
     }
 
